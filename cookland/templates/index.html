@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset=utf-8>
+    	<title>Test</title>
+    	<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+	</head>
+	<body>
+	<div class="wrapper">
+	<header class="header-page">
+		<div class="logo"><img src="{% static "style/name.png" %}"></div>
+		<div class="inputsite">
+			<input type="submit" value="Войти"><br><br>
+		</div>
+		<div class="search">
+			<input type="text" name="search" placeholder="Поиск по сайту"><br><br>
+		</div>
+	</header>
+	<div class="header-menu">
+		<ul class="main-menu">
+			<li><a href="index.html" class="a-header"><img src="{% static "style/glav.png" %}"></a></li>
+			<li><a href="" class="a-header subrecepts"><img src="{% static "style/recepts.png" %}"></a>
+				<ul class="sub-menu">
+                    <li><a href="">Первые блюда</a></li>
+                    <li><a href="">Вторые блюда</a></li>
+                    <li><a href="">Салаты</a></li>
+                    <li><a href="">Закуски</a></li>
+                    <li><a href="">Выпечка</a></li>
+                    <li><a href="">Завтраки</a></li>
+                    <li><a href="">Десерты</a></li>
+                    <li><a href="">Идеи для пикника</a></li>
+                    <li><a href="">Напитки</a></li>
+                </ul>
+			</li>
+			<li><a href="" class="a-header"><img src="{% static "style/stats.png" %}"></a></li>
+			<li><a href="" class="a-header"><img src="{% static "style/project.png" %}"></a></li>
+		</ul>
+	</div><br><br>
+	<div class="container">
+		<section class="content">
+			<p><img src="{% static "style/book.png" %}">обро пожаловать на сайт "Вкус творчества" - сайт о кулинарном искусстве.</p>
+			<p>"Вкус творчества" - это собрание рецептов как простых, так и изысканных блюд для повседневной жизни и для праздника, или чтобы просто побаловать любимого человека.</p>
+			<p>На данный момент "Вкус творчества" находится в разработке и база рецептов будет переодически пополняться. </p>
+			<p>Надеюсь на этом сайте Вы найдете много интересных рецептов и полезных советов.</p>
+			<p>Готовьте с любовью, душой и удовольствеим, подходите к готовке творчески и тогда любое блюдо получится настоящим шедевром!</p>
+		</section>
+		<section class="menu">
+			<ul>
+				<li>Категории рецептов</li>
+				<li class="imgmarker"><a href="">Первые блюда</a></li>
+				<li class="imgmarker"><a href="">Вторые блюда</a></li>
+				<li class="imgmarker"><a href="">Салаты</a></li>
+				<li class="imgmarker"><a href="">Закуски</a></li>
+				<li class="imgmarker"><a href="">Выпечка</a></li>
+				<li class="imgmarker"><a href="">Завтраки</a></li>
+				<li class="imgmarker"><a href="">Десерты</a></li>
+				<li class="imgmarker"><a href="">Идеи для пикника</a></li>
+				<li class="imgmarker"><a href="">Напитки</a></li>
+			</ul>
+			</section>
+			<section class="menu">
+			<ul>
+				<li>Полезные и интересное</li>
+				<li><a href="">Пропорции крупы и жидкости для варки каш</a></li>
+				<li><a href="">Почему шоколад поднимает настроение?</a></li>
+			</ul><br>
+		</section>
+	</div>
+	</div>
+	<div class="clearing"></div>
+	<footer class="footer-page">
+	<div class="podpiska">
+		<input type="text" name="email" placeholder="Подписаться на новые рецепты">
+		<input type="submit" value="Подписаться"><br><br>
+	</div>
+		Вкус творчества 2014<br>
+		Контанкты:<a href="mailto:python.ea@gmail.com">python.ea@gmail.com</a>
+	</footer>
+	</body>
+</html>
