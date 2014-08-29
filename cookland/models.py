@@ -9,4 +9,7 @@ class CookPost(models.Model):
 	#class Meta:
 	#	ordering = ('-timestamp',)
 
-admin.site.register(CookPost)
+class CookPostAdmin(admin.ModelAdmin):
+	list_display = ('title',)
+
+admin.site.register(CookPost, CookPostAdmin)
