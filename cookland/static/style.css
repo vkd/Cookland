@@ -27,7 +27,6 @@ p {
 }
 
 a {
-	margin-left: 30px;
 	text-decoration: none;
 	color: #4F4F4F;
 }
@@ -134,6 +133,10 @@ input[type="submit"]:hover {
     display: inline-block;
     margin-left: 2%;
     position:relative;
+}
+
+.main-menu > li > a {
+	margin-left: 30px;
 }
 
 .main-menu>li:hover .sub-menu {
