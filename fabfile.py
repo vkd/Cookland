@@ -1,4 +1,5 @@
-from fabric.api import local
+from fabric.api import local, lcd
 
-def prepare_deployment(branch_name):
-	local('git push origin master')
+def deploy():
+	with lcd(''):
+		local('git push origin master')
