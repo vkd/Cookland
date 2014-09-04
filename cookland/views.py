@@ -7,7 +7,6 @@ from cookland.models import CookPost
 
 def index(request):
 	posts = CookPost.objects.all()
-	t = loader.get_template("index.html")
-	c = Context({ 'posts': posts })
-	return HttpResponse(t.render(c))
+	context = { 'posts': posts }
+	return render(request, 'index.html', context)
 	
