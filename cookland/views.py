@@ -14,4 +14,8 @@ def index(request):
 
 	context = { 'posts': posts }
 	return render(request, 'index.html', context)
+
+def form_input(request):
+	context = { }
+	return render(request, 'form_input.html', context)
 	
