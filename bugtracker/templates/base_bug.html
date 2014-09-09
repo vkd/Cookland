@@ -6,10 +6,12 @@
     </head>
     <body>
     	{% if user.is_authenticated %}
-        	<div>Welcome, {{ user.username }}!</div>
-		{% else %}
-	        <div><a href="{% url 'register' %}">Register</a></div>
-		{% endif %}
+            <div>Welcome, {{ user.username }}
+             | <a href="{% url 'logout' %}">Logout</a></div>
+        {% else %}
+            <div><a href="{% url 'register' %}">Register
+             | <a href="{% url 'login' %}">Login</a></div>
+        {% endif %}
 
         {% block content_block %}
         {% endblock %}
