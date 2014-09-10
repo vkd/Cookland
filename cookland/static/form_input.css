@@ -45,7 +45,8 @@ label {
 input[type="text"],
 input[type="password"] {
 	width: 200px;
-	height: 22px;
+	height: 23px;
+	border: 1px solid #DCDCDC;
 }
 
 input[type="checkbox"] {
@@ -59,7 +60,7 @@ input[type="checkbox"] + label span {
 	height: 15px;
 	border-radius: 2px;
 	cursor: pointer;
-	margin: 2px 4px 5px 65px;
+	margin: 2px 4px 5px 45px;
 	border: 1px solid #838B83;
 	border-top-right-radius: 2px;
 	border-bottom-right-radius: 2px;
@@ -72,7 +73,7 @@ input[type="checkbox"]:checked + label span {
 }
 
 input[type="submit"] {
-	margin-left: 10px;
+	margin-left: 53px;
 	width: 100px;
 	height: 30px;
 	border: 1px solid #8cd148;  
@@ -89,11 +90,11 @@ input[type="submit"] {
 	color: #548B54;
 	font-weight: bold;
 	text-align: center;
-	margin: 2px 4px 5px 52px;
+	margin: 2px 17px 5px 46px;
 }
 
 .inputname {    
-	width: 55px;    
+	width: 60px;    
 	height: 15px;    
 	background: #8cd148;  
 	font-weight: bold;   
