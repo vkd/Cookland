@@ -12,7 +12,8 @@ html {
 }
 
 body {
-	font-size: 16px;
+	font-size: 14px;
+	font-family: Tahoma, Verdana, sans-serif;
 	margin:0; 
 	padding:0;
 }
@@ -24,6 +25,7 @@ footer, header, menu, section {
 p {
 	font-style: italic;
 	font-size: 20px;
+	font-family: none;
 }
 
 a {
