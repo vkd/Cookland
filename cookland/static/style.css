@@ -37,26 +37,26 @@ a:hover {
 
 input[type="text"],
 input[type="submit"] {
-	height: 33px;
+	height: 30px;
 	font: 14px;
 	border: 1px solid #27408B;
-	border-radius: 5px;
-    opacity: 0.8;
+	border-radius: 2px;
     margin-bottom: -10px;
 }
 
 input[type="text"] {
 	text-align: center;
     width: 230px;
+    opacity: 0.8;
 }
 
 .search input[type="text"] {
-	width: 150px;
+	text-align: left;
+	padding-left: 5px;
 }
 
 input[type="submit"] {
-	margin-left: 53px;
-	width: 100px;
+	margin-left: 10px;
 	height: 30px;
 	border: 1px solid #8cd148;  
 	font-weight: bold;
@@ -67,6 +67,10 @@ input[type="submit"] {
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
+.but_login {
+	width: 100px;
+}
+
 /*Шапка сайта*/
 
 .logo {
@@ -75,11 +79,11 @@ input[type="submit"] {
 }
 
 .inputsite {
-	float: right;
+	text-align: right;
 }
 
 .search {
-	float: right;
+	text-align: right;
 }
 
 .header-page { 
@@ -283,34 +287,12 @@ input[type="submit"] {
 
 /*Подвал сайта*/
 
-.podpiska_but {
-	display: block;
-	width: 130px;
-	height: 25px;
-	font: 14px;
-	position: absolute;
-	left: 260px;
-	bottom: 33px;
-	padding: 7px 0 3px 0;
-	text-align: center;
-	vertical-align: middle;
-	border-radius: 5px;
-    opacity: 1;
-    border: 1px solid #8cd148;  
-	font-weight: bold;
-	color: #fff; 
-	text-shadow: 1px 1px 1px #427212;
-	background: #8cd148;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 
-    			0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-
-.podpiska_but:hover {
-	color: #fff;
-}
-
-.podpiska {
+.subscription {
 	float: left;
+}
+
+.but_subscription {
+	width: 150px;
 }
 
 .clearing { 
