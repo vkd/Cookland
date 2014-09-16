@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+    	<title>Вкус творчества</title>
+    	<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    	<link rel="stylesheet" type="text/css" href="{% static "form_input.css" %}">
+	</head>
+	<body>
+	<div class="wrapper">
+	<header class="header-page">
+		<div class="logo"><a href=""><img src="{% static "style/name.png" %}"></a></div>
+		<div class="inputsite">
+		 <a href="#win" id="win_pop">Войти</a>
+			<input type="submit" onclick="javascript:window.location='admin/'" value="Войти" class="but_login"><br><br>
+		</div>
+		<!--lightbox-->
+		<a href="#x" class="overlay" id="win"></a> 
+        <div class="popup">
+        	<form class="login-form" action="/auth" method="post">
+			<h1 class="h_loginform">Войти на сайт</h1>
+			<div class="inputname">Логин:</div><div class="in_login"><input type="text" name="login"></div><br>
+            <div class="inputname">Пароль:</div><div class="in_login"><input type="password" name="password"></div><br>
+            <input type="checkbox" id="check" />
+			<label for="check"><span></span>Запомнить меня</label> 
+            <input type="submit" value="Войти" class="submit_login"><br><br>
+            <a href="" class="a_forminput">Забыли пароль?</a>
+            <a href="" class="a_forminput">Регистрация</a><br>	
+		</form>
+        <a class="close"title="Закрыть" href="#close"></a>
+        </div>
+        <!--lightbox-->
+		<div class="search">
+			<input type="text" name="search" placeholder="Поиск по сайту"><br><br>
+		</div>
+	</header>
+
+	{% block content_block %}
+    {% endblock %}
+
+	<footer class="footer-page">
+	<div class="subscription">
+		<input type="text" name="email" placeholder="Подписаться на новые рецепты">
+		<input type="submit" value="Подписаться" class="but_subscription">
+	</div>
+		Вкус творчества 2014<br>
+		Контанкты:<a href="mailto:python.ea@gmail.com">python.ea@gmail.com</a><br>
+		Разработка: ptonixue, vkd
+	</footer>
+	</body>
+</html>
