@@ -22,16 +22,33 @@ footer, header, menu, section {
 	display: block;
 }
 
-a {
-	margin-left: 30px;
-	color: #9B30FF;
+.logo {
+	float: left;
+	margin: 0 0 0 15%;	
 }
 
-a: hover {
-	color: #B22222;
+.header-page { 
+	width: 1024px; 
+	height: 120px; 
+	margin: 0 auto; 
+	padding: 10px;
+	position: relative;
 }
 
-h1 {
+.login-form{		/*Окно формы входа*/
+   display: block;
+   width: 380px;
+   height: 260px;
+   margin: auto;
+   margin-top: 5%;
+   border: solid 2px #8cd148;
+   	background: #fff;
+   	border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
+    			0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.h_loginform {		/*Заголовок h1*/
 	font-size: 20px;
 	margin: 0px 0px 10px 0px;
 	padding: 20px 20px 10px 45px;
@@ -42,8 +59,25 @@ label {
 	color: #4F4F4F;
 }
 
-input[type="text"],
-input[type="password"] {
+.inputname {		/*Названия полей ввода*/
+	width: 60px;    	
+	height: 15px;    
+	background: #8cd148;  
+	font-weight: bold;   
+	padding: 4px 10px 6px 10px; 
+	margin-left: 45px;  
+	border: 1px solid #8cd148;    
+	border-right: none;    
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	color: #fff; 
+	text-shadow: 1px 1px 1px #427212;
+	float: left; 
+	text-align: center;
+}   
+
+.in_login input[type="text"],		/*Поля ввода*/
+.in_login input[type="password"] {
 	width: 200px;
 	height: 23px;
 	border: 1px solid #DCDCDC;
@@ -72,7 +106,7 @@ input[type="checkbox"]:checked + label span {
 	background-size: cover;
 }
 
-input[type="submit"] {
+.submit_login {		/*Кнопка войти*/
 	margin-left: 53px;
 	width: 100px;
 	height: 30px;
@@ -86,52 +120,9 @@ input[type="submit"] {
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
-.a_forminput {
+.a_forminput {		/*Ссылки формы входа*/
 	color: #548B54;
 	font-weight: bold;
 	text-align: center;
 	margin: 2px 17px 5px 46px;
-}
-
-.inputname {    
-	width: 60px;    
-	height: 15px;    
-	background: #8cd148;  
-	font-weight: bold;   
-	padding: 4px 10px 6px 10px; 
-	margin-left: 45px;  
-	border: 1px solid #8cd148;    
-	border-right: none;    
-	border-top-left-radius: 2px;
-	border-bottom-left-radius: 2px;
-	color: #fff; 
-	text-shadow: 1px 1px 1px #427212;
-	float: left; 
-	text-align: center;
-}    
-
-.logo {
-	float: left;
-	margin: 0 0 0 15%;	
-}
-
-.header-page { 
-	width: 1024px; 
-	height: 120px; 
-	margin: 0 auto; 
-	padding: 10px;
-	position: relative;
-}
-
-.login-form{
-   display: block;
-   width: 380px;
-   height: 275px;
-   margin: auto;
-   margin-top: 5%;
-   border: solid 2px #8cd148;
-   	background: #fff;
-   	border-radius: 4px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
-    			0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
+} 

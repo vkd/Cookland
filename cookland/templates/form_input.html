@@ -11,12 +11,12 @@
 				<div class="logo"><a href="/cook"><img src="{% static "style/name.png" %}"></a></div>
 		</header>
 		<form class="login-form" action="/auth" method="post">
-			<h1>Войти на сайт</h1>
-			<div class="inputname">Логин:</div><input type="text" name="login"><br><br>
-            <div class="inputname">Пароль:</div><input type="password" name="password"><br><br>
+			<h1 class="h_loginform">Войти на сайт</h1>
+			<div class="inputname">Логин:</div><div class="in_login"><input type="text" name="login"></div><br>
+            <div class="inputname">Пароль:</div><div class="in_login"><input type="password" name="password"></div><br>
             <input type="checkbox" id="check" />
 			<label for="check"><span></span>Запомнить меня</label> 
-            <input type="submit" value="Войти"><br><br>
+            <input type="submit" value="Войти" class="submit_login"><br><br>
             <a href="" class="a_forminput">Забыли пароль?</a>
             <a href="" class="a_forminput">Регистрация</a><br>	
 		</form>
