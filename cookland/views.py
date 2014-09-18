@@ -18,4 +18,8 @@ def index(request):
 def form_input(request):
 	context = { }
 	return render(request, 'form_input.html', context)
+
+def custom_not_found_page(request):
+	context = { }
+	return render(request, '404.html', context)
 	

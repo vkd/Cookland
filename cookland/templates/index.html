@@ -3,6 +3,33 @@
 
 {% load staticfiles %}
 
+	<header class="header-page">
+		<div class="logo"><a href=""><img src="{% static "style/name.png" %}"></a></div>
+		<div class="inputsite">
+		 <a href="#win" id="win_pop">Войти</a>
+			<input type="submit" onclick="javascript:window.location='admin/'" value="Войти" class="but_login"><br><br>
+		</div>
+		<!--lightbox-->
+		<a href="#x" class="overlay" id="win"></a> 
+        <div class="popup">
+        	<form class="login-form" action="/auth" method="post">
+			<h1 class="h_loginform">Войти на сайт</h1>
+			<div class="inputname">Логин:</div><div class="in_login"><input type="text" name="login"></div><br>
+            <div class="inputname">Пароль:</div><div class="in_login"><input type="password" name="password"></div><br>
+            <input type="checkbox" id="check" />
+			<label for="check"><span></span>Запомнить меня</label> 
+            <input type="submit" value="Войти" class="submit_login"><br><br>
+            <a href="" class="a_forminput">Забыли пароль?</a>
+            <a href="" class="a_forminput">Регистрация</a><br>	
+		</form>
+        <a class="close"title="Закрыть" href="#close"></a>
+        </div>
+        <!--lightbox-->
+		<div class="search">
+			<input type="text" name="search" placeholder="Поиск по сайту"><br><br>
+		</div>
+	</header>
+
 	<div class="header-menu">
 		<ul class="main-menu">
 			<li><a href="" class="a-header"><img src="{% static "style/glav.png" %}"></a></li>
@@ -22,7 +49,8 @@
 			<li><a href="" class="a-header"><img src="{% static "style/stats.png" %}"></a></li>
 			<li><a href="" class="a-header"><img src="{% static "style/project.png" %}"></a></li>
 		</ul>
-	</div><br><br>
+	</div>
+	<br><br>
 	<div class="container">
 		<section class="content">
 			<p><img src="{% static "style/book.png" %}">обро пожаловать на сайт "Вкус творчества" - сайт о кулинарном искусстве.</p>
@@ -53,6 +81,4 @@
 			</ul><br>
 		</section>
 	</div>
-	</div>
-	<div class="clearing"></div>
 {% endblock %}

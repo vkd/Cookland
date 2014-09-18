@@ -1,9 +1,9 @@
 from django.conf.urls import *
 
-from cookland.views import index as cook_index
-from cookland.views import form_input
+from cookland.views import *
 
 urlpatterns = patterns('',
 	url(r'^admin/', form_input),
-	url(r'^$', cook_index),
+	url(r'^404/', custom_not_found_page),
+	url(r'^$', index),
 )
