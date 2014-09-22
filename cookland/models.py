@@ -12,11 +12,7 @@ class Recipe(models.Model):
 	ingredients = models.ManyToManyField(Produce, related_name='recipes', through='Ingredient')
 	discribe = models.TextField()
 	image = models.ImageField(blank=True)
-	tags = models.ManyToManyField(Tag, related_name='recipes', through='Recipe_Tags')
-
-class Recipe_Tags(models.Model):
-	tag = models.ForeignKey(Tag)
-	recipe = models.ForeignKey(Recipe)
+	tags = models.ManyToManyField('Tag', related_name='recipes')
 
 class Ingredient(models.Model):
 	value = models.CharField(max_length=150)

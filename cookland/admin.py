@@ -4,17 +4,17 @@ from cookland.models import CookPost, Recipe, Tag, Ingredient, Produce
 class TagAdmin(admin.ModelAdmin):
 	list_display = ('name', )
 
+class ProduceAdmin(admin.ModelAdmin):
+	list_display = ('name', )
+
+class RecipeAdmin(admin.ModelAdmin):
+	list_display = ('name', )
+
 class CookPostAdmin(admin.ModelAdmin):
 	list_display = ('title',)
 
-class RecipeAdmin(admin.ModelAdmin):
-	list_display = ('name',)
-
 class IngredientAdmin(admin.ModelAdmin):
-	list_display = ('value', )
-
-class ProduceAdmin(admin.ModelAdmin):
-	list_display = ('name', )
+	list_display = ('value', 'produce', 'recipe', )
 
 # Register your models here.
 admin.site.register(CookPost, CookPostAdmin)
