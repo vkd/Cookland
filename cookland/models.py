@@ -17,7 +17,7 @@ class Recipe(models.Model):
 	name = models.CharField(max_length=150)
 	ingredients = models.ManyToManyField(Produce, related_name='recipes', through='Ingredient')
 	discribe = models.TextField()
-	image = models.ImageField(blank=True)
+	#image = models.ImageField(blank=True)
 	tags = models.ManyToManyField(Tag, related_name='recipes', through='Recipe_Tags')
 
 	def __unicode__(self):
