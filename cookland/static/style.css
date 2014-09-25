@@ -56,7 +56,6 @@ input[type="text"] {
 	text-align: left;
     width: 230px;
     opacity: 0.8;
-    padding-left: 7px;
     box-shadow: 0 0 1px 1px rgba(0,0,0,0);
 }
 
@@ -74,6 +73,10 @@ input[type="text"]:focus::-moz-placeholder {
 .search input[type="text"] {
 	text-align: left;
 	padding-left: 5px;
+}
+
+.subscription input[type="text"] {
+	padding-left: 7px;
 }
 
 input[type="submit"] {
