@@ -173,7 +173,7 @@ input[type="checkbox"]:checked + label span {
     border-radius: 15px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
-    border: 1px solid #8cd148;
+    border: 2px solid #8cd148;
 }
 
 .close:before {

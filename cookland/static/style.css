@@ -39,6 +39,10 @@ a:hover {
 	color: #B22222;
 }
 
+.a_mail {
+	color: #363636;
+}
+
 input[type="text"],
 input[type="submit"] {
 	height: 30px;
@@ -49,9 +53,21 @@ input[type="submit"] {
 }
 
 input[type="text"] {
-	text-align: center;
+	text-align: left;
     width: 230px;
     opacity: 0.8;
+    padding-left: 7px;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0);
+}
+
+input[type="text"]:focus {
+	outline: none;
+	box-shadow: 0 0 2px 2px #8CD148;
+	opacity: 0.8;
+}
+
+input[type="text"]:focus::-moz-placeholder {
+  color: transparent;
 }
 
 .search input[type="text"] {
@@ -287,6 +303,60 @@ input[type="submit"] {
 .menu li:last-child:hover {
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+}
+
+.new_recipe_menu {
+	width: 25%;
+	height: auto;
+	margin: 10px;
+	margin-left: 750px;
+	background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
+    			0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.new_recipe_menu ul {
+	list-style: none;
+	font-family: Tahoma,Verdana,sans-serif;
+	font-size: 14px;
+}
+
+.new_recipe_menu li {
+	color: #4F4F4F;
+}
+
+.new_recipe_menu li:first-child {
+	font: 20px italic;
+	color: #8B0000;
+	text-align: left;
+	padding-left: 20px;
+	padding-bottom: 15px;
+	border-bottom: none;
+	list-style: none;
+}
+
+.new_recipe_block {
+	display: block;
+	width: 150px;
+	height: 128px;
+	border: 1px solid #9C9C9C;
+	text-align: center;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5), 
+    			0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.new_recipe_block:hover {
+	opacity: 0.8;
+}
+
+.new_recipe_block img {
+	border-radius: 4px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 
 /*Подвал сайта*/
