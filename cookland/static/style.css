@@ -60,7 +60,8 @@ input[type="text"] {
     box-shadow: 0 0 1px 1px rgba(0,0,0,0);
 }
 
-input[type="text"]:focus {
+.search input[type="text"]:focus,
+.subscription input[type="text"]:focus {
 	outline: none;
 	box-shadow: 0 0 2px 2px #8CD148;
 	opacity: 0.8;
