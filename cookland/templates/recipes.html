@@ -1,0 +1,24 @@
+{% extends 'base_cook.html' %}
+{% block content_block %}
+
+{% load staticfiles %}
+
+{% for recipe in recipes %}
+	<p>Name: {{ recipe.name }}</p>
+	<p>Discribe: {{ recipe.discribe }}</p>
+	{% for tag in recipe.tags.all %}
+		<p>Tag {{ forloop.counter }} - {{ tag.name }}</p>
+	{% empty %}
+		<p>None tags</p>
+	{% endfor %}
+	{% for ingredient in recipe.ingredient_set.all %}
+		<p>Ingredient {{ forloop.counter }} - {{ ingredient.value }} {{ ingredient.produce.name }}</p>
+	{% empty %}
+		<p>None ingredients</p>
+	{% endfor %}
+	=======
+{% empty %}
+	<p>empty list</p>
+{% endfor %}
+
+{% endblock %}
