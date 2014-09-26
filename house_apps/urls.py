@@ -11,5 +11,5 @@ urlpatterns = patterns('',
 
     url(r'^cook/', include('cookland.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^bugs/', include('bugtracker.urls')),
+    url(r'^bugs/', include('bugtracker.urls', namespace='bugs')),
 )

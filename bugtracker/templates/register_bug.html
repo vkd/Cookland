@@ -2,9 +2,9 @@
 {% block title_block %}Registration{% endblock %}
 {% block content_block %}
 {% if user.is_authenticated %}
-    <a href="{% url 'index' %}">Back to main page</a>
+    <a href="{% url 'bugs:index' %}">Back to main page</a>
 {% else %}
-    <form action="{% url 'register' %}" method="post">
+    <form action="{% url 'bugs:register' %}" method="post">
       {% csrf_token %}
       {{ form.as_p }}
       <input type="submit" value="Submit" />

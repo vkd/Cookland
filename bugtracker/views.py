@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.urlresolvers import reverse_lazy
 
 # Create your views here.
 def index(request):
@@ -14,6 +15,7 @@ from .models import Ticket
 class BugListView(ListView):
     model = Ticket
     template_name = 'list_bug.html'
+    success_url = reverse_lazy('456.html')
 
 from django.views.generic import DetailView
 
@@ -22,19 +24,18 @@ class BugDetailView(DetailView):
     template_name = 'detail_bug.html'
 
 from django.views.generic import CreateView
-from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
 
 class RegisterView(CreateView):
     form_class = UserCreationForm
     template_name = 'register_bug.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('bugs:index')
 
 class BugCreateView(CreateView):
     model = Ticket
     template_name = 'add_bug.html'
     fields = ['title', 'text']
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('bugs:index')
 
     def form_valid(self, form):
         form.instance.user = self.request.user
