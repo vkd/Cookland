@@ -1,7 +1,7 @@
-{% extends 'base_bug.html' %}
+{% extends 'bugs/base_bug.html' %}
 {% block title_block %}Login{% endblock %}
 {% block content_block %}
-<form action="{% url 'bugs:django.contrib.auth.views.login' %}" method="post">
+<form action="{% url 'bugs:login' %}" method="post">
   {% csrf_token %}
   {% if form.non_field_errors %}
     <p>

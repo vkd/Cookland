@@ -1,9 +1,9 @@
-{% extends 'base_bug.html' %}
+{% extends 'bugs/base_bug.html' %}
 {% block title_block %}Add ticket{% endblock %}
 {% block content_block %}
 {% if user.is_authenticated %}
     <a href="{% url 'bugs:index' %}">Back to main page</a>
-    <form action="{% url 'add' %}" method="post">
+    <form action="{% url 'bugs:add' %}" method="post">
       {% csrf_token %}
       {{ form.as_p }}
       <input type="submit" value="Submit" />
