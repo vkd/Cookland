@@ -6,6 +6,10 @@ from django.http import HttpResponse, Http404
 
 from cookland.models import *
 
+def test_page(request):
+	context = { }
+	return render(request, 'cook/test.html', context)
+
 def index(request):
 	#try:
 	#	posts = CookPost.objects.all()
