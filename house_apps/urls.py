@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     url(r'^$', 'house_apps.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^cook/', include('cookland.urls')),
+    url(r'^cook/', include('cookland.urls', namespace='cook')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^bugs/', include('bugtracker.urls', namespace='bugs')),
 )

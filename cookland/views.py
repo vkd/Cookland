@@ -13,18 +13,18 @@ def index(request):
 	#	raise Http404
 
 	context = { }
-	return render(request, 'index.html', context)
+	return render(request, 'cook/index.html', context)
 
 def form_input(request):
 	context = { }
-	return render(request, 'form_input.html', context)
+	return render(request, 'cook/form_input.html', context)
 
 def custom_not_found_page(request):
 	context = { }
-	return render(request, '404.html', context)
+	return render(request, 'cook/404.html', context)
 
 def recipes_list(request):
 	context = { 'recipes' : Recipe.objects.all() }
-	return render(request, 'recipes.html', context)
+	return render(request, 'cook/recipes.html', context)
 	
 	
