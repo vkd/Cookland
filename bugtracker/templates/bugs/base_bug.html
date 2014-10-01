@@ -10,7 +10,7 @@
              | <a href="{% url 'bugs:logout' %}">Logout</a></div>
         {% else %}
             <div><a href="{% url 'bugs:register' %}">Register
-             | <a href="{% url 'bugs:login' %}">Login</a></div>
+             | <a href="{% url 'bugs:login' %}?next={% url 'bugs:index' %}">Login</a></div>
         {% endif %}
 
         {% block content_block %}

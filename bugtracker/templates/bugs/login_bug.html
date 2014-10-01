@@ -23,6 +23,7 @@
       {% endif %}
     </div>
   {% endfor %}
-  <input type="submit" value="Submit" />
+  <input type="submit" value="login" />
+  <input type="hidden" name="next" value="{{ next }}" />
 </form>
 {% endblock %}
