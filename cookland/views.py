@@ -12,6 +12,10 @@ def test_page(request):
 	context = { }
 	return render(request, 'cook/test.html', context)
 
+def recipes_list_page(request):
+	context = { }
+	return render(request, 'cook/recipes_list.html', context)
+
 def index(request):
 	#try:
 	#	posts = CookPost.objects.all()
