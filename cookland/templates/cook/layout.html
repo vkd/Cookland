@@ -1,0 +1,59 @@
+{% extends 'cook/base.html' %}
+{% load staticfiles %}
+{% block layout_block %}
+<div class="header-menu">
+		<ul class="main-menu">
+			<li><a href="{% url 'cook:index' %}" class="a-header"><img src="{% static "style/glav.png" %}"></a></li>
+			<li><a href="" class="a-header subrecepts"><img src="{% static "style/recepts.png" %}"></a>
+				<ul class="sub-menu">
+                    <li><a href="">Первые блюда</a></li>
+                    <li><a href="">Вторые блюда</a></li>
+                    <li><a href="">Салаты</a></li>
+                    <li><a href="">Закуски</a></li>
+                    <li><a href="">Выпечка</a></li>
+                    <li><a href="">Завтраки</a></li>
+                    <li><a href="">Десерты</a></li>
+                    <li><a href="">Идеи для пикника</a></li>
+                    <li><a href="">Напитки</a></li>
+                </ul>
+			</li>
+			<li><a href="" class="a-header"><img src="{% static "style/stats.png" %}"></a></li>
+			<li><a href="" class="a-header"><img src="{% static "style/project.png" %}"></a></li>
+		</ul>
+	</div>
+	<br><br>
+	<div class="container">
+		<section class="content">		
+	{% block content_block %}
+	{% endblock %}
+		</section>
+		<section class="menu">
+			<ul>
+				<li>Категории рецептов</li>
+				<li class="imgmarker"><a href="{% url 'cook:recipes' %}">Список рецептов</a></li>
+				<li class="imgmarker"><a href="{% url 'cook:test' %}">Вторые блюда</a></li>
+				<li class="imgmarker"><a href="">Салаты</a></li>
+				<li class="imgmarker"><a href="{% url 'cook:recipes_list' %}">Закуски</a></li>
+				<li class="imgmarker"><a href="">Выпечка</a></li>
+				<li class="imgmarker"><a href="">Завтраки</a></li>
+				<li class="imgmarker"><a href="">Десерты</a></li>
+				<li class="imgmarker"><a href="">Идеи для пикника</a></li>
+				<li class="imgmarker"><a href="">Напитки</a></li>
+			</ul>
+		</section>
+		<section class="menu">
+			<ul>
+				<li>Полезные и интересное</li>
+				<li><a href="">Пропорции крупы и жидкости для варки каш</a></li>
+				<li><a href="">Почему шоколад поднимает настроение?</a></li>
+			</ul><br>
+		</section>
+		<section class="new_recipe_menu">
+			<ul>
+				<li>Новые рецепты</li>
+				<li><a href="" class="new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
+				<li><a href="" class="new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
+			</ul><br>
+		</section>
+	</div>
+{% endblock %}
