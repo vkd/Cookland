@@ -14,7 +14,7 @@ html {
 }
 
 body {
-	font-size: 14px;
+	font-size: 15px;
 	font-family: Tahoma, Verdana, sans-serif;
 	margin:0; 
 	padding:0;
@@ -23,12 +23,6 @@ body {
 
 footer, header, menu, section {
 	display: block;
-}
-
-p {
-	font-style: italic;
-	font-size: 20px;
-	font-family: none;
 }
 
 a {
@@ -281,6 +275,7 @@ input[type="submit"] {
 	font-family: Tahoma, Verdana, sans-serif;
 	width: 80%;
 	height: auto;
+	font-size: 14px;
 }
 
 .menu li {

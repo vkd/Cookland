@@ -2,10 +2,34 @@
 {% block content_block %}
 
 {% load staticfiles %}
+
+<script>
+	window.onload = function () {
+	    document.getElementById("ul").onclick = function a(e) {
+	        e = e || event;
+	        var target = e.target || e.srcElement;
+	        if (target.tagName == "LI") {
+	            document.getElementById(target.className).style.display = document.getElementById(target.className).style.display == "block" ? "none" : "block";
+	            target.style.listStyleImage = document.getElementById(target.className).style.display == "block" ? "url(http://yandex.st/share/static/b-share-popup_down__tail.png)" : "url(http://ktonanovenkogo.ru/wp-content/themes/Organic/images/bullet.png)";
+	            //alert("v");
+	        }
+	    }
+	}
+</script>
 	
 		<h1 class="h_title">Закуски</h1>
 		<p>Всего в категории n-рецептов</p>
-		<p>Подкатегории (выпадающий список)</p>
+
+		<ul class="list_img" id="ul">
+			<li class="c1">Подкатегории</li>
+				<ul id="c1" class="list_imgs">
+					<li><a href="">Мясо</a></li>
+					<li><a href="">Рыба</a></li>
+					<li><a href="">Овощи</a></li>
+					<li><a href="">Яйца</a></li>
+				</ul>
+		</ul>
+
 		<hr>
 		<div class="prew_recipes">
 			<img src="{% static "style/test_1.jpg" %}">
@@ -42,5 +66,7 @@
 			</p>
 		</div>
 		<hr>
+
+
 
 {% endblock %}

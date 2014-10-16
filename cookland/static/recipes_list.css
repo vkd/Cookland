@@ -1,13 +1,14 @@
 hr {
 	color: #B5B5B5;
+	opacity: 0.8;
 }
 
 .h_title {
 	text-align: center;
 	font-size: 26px;
 	font-weight: normal;
-	color: rgb(139, 0, 0);
-	text-shadow: 1px 1px 1px rgb(79, 79, 79);
+	color: #c81414;
+	text-shadow: 1px 1px 1px #696969;
 	padding: 0;
 	margin: 0;
 }
@@ -26,6 +27,10 @@ hr {
 	padding: 0;
 	margin: 0;
 	font-size: 21px;
+}
+
+.prew_recipes a:hover {
+	color: rgb(139, 0, 0);
 }
 
 .prew_recipes h2 {
@@ -50,4 +55,17 @@ hr {
 	margin: 10px 15px 0 0;
 	border: 1px solid gray;
 	border-radius: 3px;
+}
+
+ul.list_img {
+	list-style-image: url(http://ktonanovenkogo.ru/wp-content/themes/Organic/images/bullet.png);
+	line-height: 170%;
+	margin-top: -15px;
+}
+ul.list_img li {
+	cursor: pointer;
+}
+ul.list_imgs {
+	list-style: none none;
+	display: none;
 }
