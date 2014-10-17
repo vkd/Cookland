@@ -10,7 +10,7 @@
 	        var target = e.target || e.srcElement;
 	        if (target.tagName == "LI") {
 	            document.getElementById(target.className).style.display = document.getElementById(target.className).style.display == "block" ? "none" : "block";
-	            target.style.listStyleImage = document.getElementById(target.className).style.display == "block" ? "url(http://yandex.st/share/static/b-share-popup_down__tail.png)" : "url(http://ktonanovenkogo.ru/wp-content/themes/Organic/images/bullet.png)";
+	            target.style.listStyleImage = document.getElementById(target.className).style.display == "block" ? "url({% static "style/down_tail.png" %})" : "url({% static "style/arrow.png" %})";
 	            //alert("v");
 	        }
 	    }

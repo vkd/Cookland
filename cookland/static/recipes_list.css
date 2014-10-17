@@ -58,7 +58,7 @@ hr {
 }
 
 ul.list_img {
-	list-style-image: url(http://ktonanovenkogo.ru/wp-content/themes/Organic/images/bullet.png);
+	list-style-image: url('style/arrow.png');
 	line-height: 170%;
 	margin-top: -15px;
 }
