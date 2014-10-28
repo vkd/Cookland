@@ -12,6 +12,10 @@ def test_page(request):
 	context = { }
 	return render(request, 'cook/test.html', context)
 
+def review_recipes_page(request):
+	context = { }
+	return render(request, 'cook/review_recipes.html', context)
+
 def recipes_list_page(request):
 	context = { }
 	return render(request, 'cook/recipes_list.html', context)

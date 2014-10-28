@@ -4,6 +4,7 @@ from django.core.urlresolvers import reverse_lazy
 from cookland.views import *
 
 urlpatterns = patterns('',
+	url(r'^review_recipes/', review_recipes_page, name='review_recipes'),
 	url(r'^recipes_list/', recipes_list_page, name='recipes_list'),
 	url(r'^test/', test_page, name='test'),
 	url(r'^admin/', form_input, name='admin'),

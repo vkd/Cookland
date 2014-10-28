@@ -1,3 +1,5 @@
+/*Список рецептов*/
+
 hr {
 	color: #B5B5B5;
 	opacity: 0.8;
@@ -69,3 +71,5 @@ ul.list_imgs {
 	list-style: none none;
 	display: none;
 }
+
+/*Просмотр рецепта*/
