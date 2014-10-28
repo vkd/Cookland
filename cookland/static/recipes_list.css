@@ -73,3 +73,26 @@ ul.list_imgs {
 }
 
 /*Просмотр рецепта*/
+.img_align {
+	text-align: center;
+}
+
+.img_review {
+	width: 650px;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+
+.h_review {
+	color: #008B00;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+.ul_review {
+	list-style: circle;
+}
+
+.appetite {
+	text-align: center;
+}
