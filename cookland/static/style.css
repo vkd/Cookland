@@ -209,12 +209,10 @@ input[type="submit"] {
 
 .container { 
 	width: 1024px; 
-	min-height: 1000px;
-	height: auto; 
 	position:relative; 
-	padding: 10px 10px 50px;
+	padding: 10px 10px 10px;
+	overflow: hidden;
 	margin: auto;
-
 	background-color: #fff;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -251,7 +249,7 @@ input[type="submit"] {
 
 .content {
 	width: 700px;
-	min-height: 1000px;
+	min-height: 1100px;
 	height: auto;
 	margin: 10px;
 	padding: 20px;
@@ -384,7 +382,7 @@ input[type="submit"] {
 .footer-page {
 	height: auto; 
 	width: 1024px; 
-	margin:-70px auto 0; 
+	margin: 0 auto 0; 
 	padding: 10px; 
 	position: relative; 
 	overflow: hidden;
