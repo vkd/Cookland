@@ -59,6 +59,11 @@ label {
 	width: 200px;
 	height: 23px;
 	border: 1px solid #DCDCDC;
+	padding-left: 3px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
 }
 
 input[type="checkbox"] {
@@ -162,4 +167,30 @@ input[type="checkbox"]:checked + label span {
 
 .close:hover {
     background-color: rgba(64, 128, 128, 0.8);
+}
+
+/*Форма добавления рецепта*/
+.name_form_add {
+	width: 150px;
+	text-align: left;
+	margin-top: 30px;
+	float: left;
+	margin-left: 20px;
+}
+
+.in_name input[type="text"] {
+	margin-top: 30px;
+	width: 75%;
+}
+
+.in_description input[type="text"] {
+	height: 200px;
+}
+
+.in_ingredient input[type="text"] {
+	height: 300px;
+}
+
+.in_preparative input[type="text"] {
+	height: 500px;
 }
