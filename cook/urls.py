@@ -1,7 +1,7 @@
 from django.conf.urls import *
 from django.core.urlresolvers import reverse_lazy
 
-from cookland.views import *
+from cook.views import *
 
 urlpatterns = patterns('',
 	url(r'^add_recipe/', add_recipe_page, name='add_recipe'),

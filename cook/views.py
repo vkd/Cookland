@@ -6,7 +6,7 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth import authenticate, login
 
-from cookland.models import *
+from cook.models import *
 
 def test_page(request):
 	context = { }

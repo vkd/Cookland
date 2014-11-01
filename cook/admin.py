@@ -1,5 +1,5 @@
 from django.contrib import admin
-from cookland.models import *
+from cook.models import *
 
 class TagAdmin(admin.ModelAdmin):
 	list_display = ('name', )
