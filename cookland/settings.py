@@ -1,5 +1,5 @@
 """
-Django settings for house_apps project.
+Django settings for cookland project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -37,8 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'house_apps',
     'cookland',
+    'cook',
     'bugtracker'
 )
 
@@ -51,9 +51,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'house_apps.urls'
+ROOT_URLCONF = 'cookland.urls'
 
-WSGI_APPLICATION = 'house_apps.wsgi.application'
+WSGI_APPLICATION = 'cookland.wsgi.application'
 
 
 # Database

@@ -1,1 +1,1 @@
-web: gunicorn house_apps.wsgi --log-file -
+web: gunicorn cookland.wsgi --log-file -

@@ -1,0 +1,390 @@
+html,
+body {
+	width:100%;
+	height:100%; 
+	padding: 0; 
+	margin: 0;
+	color: rgb(79, 79, 79);
+}
+
+html {
+    background: url('fon.jpg') no-repeat center center fixed;
+    background-size: cover;
+	overflow: hidden;
+}
+
+body {
+	font-size: 15px;
+	font-family: Tahoma, Verdana, sans-serif;
+	margin:0; 
+	padding:0;
+	overflow: auto;
+}
+
+footer, header, menu, section {
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: #4F4F4F;
+}
+
+a:hover {
+	color: #B22222;
+}
+
+.a_mail {
+	color: #363636;
+}
+
+input[type="text"],
+input[type="submit"] {
+	height: 30px;
+	font: 14px;
+	border: 1px solid #27408B;
+	border-radius: 2px;
+    margin-bottom: -10px;
+}
+
+input[type="text"] {
+	text-align: left;
+    width: 230px;
+    opacity: 0.8;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0);
+}
+
+.search input[type="text"]:focus,
+.subscription input[type="text"]:focus {
+	outline: none;
+	box-shadow: 0 0 2px 2px #8CD148;
+	opacity: 0.8;
+}
+
+input[type="text"]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.search input[type="text"] {
+	text-align: left;
+	padding-left: 5px;
+}
+
+.subscription input[type="text"] {
+	padding-left: 7px;
+}
+
+input[type="submit"] {
+	margin-left: 10px;
+	height: 30px;
+	border: 1px solid #8cd148;  
+	font-weight: bold;
+	color: #fff; 
+	text-shadow: 1px 1px 1px #427212;
+	background: #8cd148;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 
+    			0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.but_login {
+	width: 100px;
+}
+
+/*Шапка сайта*/
+
+.logo {
+	float: left;
+	margin: 0 0 0 15%;	
+}
+
+.inputsite {
+	text-align: right;
+}
+
+.search {
+	text-align: right;
+}
+
+.header-page { 
+	width: 1024px; 
+	height:120px; 
+	margin: 0 auto; 
+	padding:10px;
+	position: relative;
+}
+
+.header-menu {
+	width: 1024px; 
+	height:50px; 
+	margin: 0 auto; 
+	padding:10px;
+	position: relative;
+
+	background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
+    			0 0 40px rgba(0, 0, 0, 0.1) inset;
+ }
+
+.header-menu:after, .header-menu:before {
+	content: "";
+    position: absolute;
+    z-index: -2;
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    height: 20%;
+    max-width: 300px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    transform: rotate(-3deg);
+}
+
+.header-menu:after {
+	right: 10px;
+    left: auto;
+    transform: rotate(3deg);
+}
+
+.a-header {
+	display: block;
+}
+
+.main-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main-menu>li {
+    display: inline-block;
+    margin-left: 2%;
+    position:relative;
+}
+
+.main-menu > li > a {
+	margin-left: 30px;
+}
+
+.main-menu>li:hover .sub-menu {
+    display:block;
+}
+
+.sub-menu {
+    position:absolute;
+    top: 45px;
+    left: 30px;
+    z-index: 3;
+    width: 180px;
+    padding: 0;
+    margin: 0;
+    list-style:none;
+    background-color: #fff;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
+    			0 0 40px rgba(0, 0, 0, 0.1) inset;
+    display: none;
+}
+
+.sub-menu a {
+   display: block;
+   padding:10px 10px 0px 10px;
+}
+
+.sub-menu>li {
+	border: solid 1px #CFCFCF;
+	border-top: none;
+	height: 40px;
+}
+
+.wrapper { 
+	width: 100%; 
+	margin:0px auto; 
+	padding:0px 0px 0px 0px; 
+	position:relative; 
+	min-height: 100%; 
+	height: auto!important; 
+	height: 100%;
+}
+
+/*Контент сайта*/
+
+.container { 
+	width: 1024px; 
+	position:relative; 
+	padding: 10px 10px 10px;
+	overflow: hidden;
+	margin: auto;
+	background-color: #fff;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
+    			0 0 40px rgba(0, 0, 0, 0.1) inset;
+	background-image: linear-gradient(-102deg, 
+		rgba(0,0,0,.1), 
+		rgba(0,0,0,.05) 10px, 
+		rgba(0,0,0,0) 20px),
+	linear-gradient(102deg, 
+		rgba(0,0,0,.1), 
+		rgba(0,0,0,.05) 10px, 
+		rgba(0,0,0,0) 20px);
+}
+
+.container:after, .container:before {
+	content: '';
+	position: absolute;
+	top: 25px;
+	width: 100px;
+	height: 100px;
+	z-index: -1;
+}
+
+.container:after { 
+	right: 20px;
+	box-shadow: 10px -10px 10px rgba(0,0,0,.5);
+	transform: rotate(-2deg) skew(-20deg);
+}
+
+.container:before {
+	left: 20px;
+	box-shadow: -10px -10px 10px rgba(0,0,0,.5);
+	transform: rotate(2deg) skew(20deg);
+}
+
+.content {
+	width: 700px;
+	min-height: 1040px;
+	height: auto;
+	margin: 10px;
+	padding: 20px;
+	float: left;
+	position: relative;
+}
+
+.menu {
+	width: 25%;
+	height: auto;
+	margin: 10px;
+	margin-left: 750px;
+	background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
+    			0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.menu ul {
+	margin: 0;
+	padding: 0;
+	padding-left: 30px;
+	font-family: Tahoma, Verdana, sans-serif;
+	width: 80%;
+	height: auto;
+	font-size: 14px;
+}
+
+.menu li {
+	list-style-image: url("dope.png");
+	padding: 10px 0px 10px 0px; 
+	border-bottom: 1px dashed #27408B;
+}
+
+.menu li:first-child {
+	font: 20px italic;
+	color: #8B0000;
+	text-align: center;
+	border-bottom: none;
+	list-style: none;
+}
+
+.menu li:first-child:hover {
+	background: none;
+}
+
+.menu li:last-child {
+	border-bottom: none;
+}
+
+.menu li:last-child:hover {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.new_recipe_menu {
+	width: 25%;
+	height: auto;
+	margin: 10px;
+	margin-top: 7px;
+	margin-left: 750px;
+	background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
+    			0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.new_recipe_menu ul {
+	list-style: none;
+	font-family: Tahoma,Verdana,sans-serif;
+	font-size: 14px;
+}
+
+.new_recipe_menu li {
+	color: #4F4F4F;
+}
+
+.new_recipe_menu li:first-child {
+	font: 20px italic;
+	color: #8B0000;
+	text-align: left;
+	padding: 10px;
+	padding-left: 20px;
+	padding-bottom: 15px;
+	border-bottom: none;
+	list-style: none;
+}
+
+.new_recipe_block {
+	display: block;
+	width: 150px;
+	height: 128px;
+	border: 1px solid #9C9C9C;
+	text-align: center;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5), 
+    			0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.new_recipe_block:hover {
+	opacity: 0.8;
+}
+
+.new_recipe_block img {
+	border-radius: 4px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+/*Подвал сайта*/
+
+.subscription {
+	float: left;
+}
+
+.but_subscription {
+	width: 150px;
+}
+
+.clearing { 
+	clear: both;
+	display: inline;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+} 
+
+.footer-page {
+	height: auto; 
+	width: 1024px; 
+	margin: 0 auto 0; 
+	padding: 10px; 
+	position: relative; 
+	overflow: hidden;
+	text-align: right;
+}
