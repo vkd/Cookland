@@ -5,6 +5,7 @@ from cook.views import *
 
 urlpatterns = patterns('',
 	url(r'^add_recipe/', add_recipe_page, name='add_recipe'),
+	url(r'^add_new_recipe/', add_new_recipe, name='add_new_recipe'),
 	url(r'^review_recipes/', review_recipes_page, name='review_recipes'),
 	url(r'^recipes_list/', recipes_list_page, name='recipes_list'),
 	url(r'^test/', test_page, name='test'),

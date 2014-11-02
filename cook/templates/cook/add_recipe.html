@@ -5,15 +5,28 @@
 
 <div class="container">
 
-	<h1 class="h_title">Форма добавления рецепта</h1>
-		<div class="name_form_add">Название рецепта</div><div class="in_login in_name"><input type="text"></div><br>
-		<div class="name_form_add">Краткое описание</div><div class="in_login in_name in_description"><input type="text"></div><br>
-		<div class="name_form_add">Ингридиенты</div><div class="in_login in_name in_ingredient"><input type="text"></div><br>
-		<div class="name_form_add">Приготовление</div><div class="in_login in_name in_preparative"><input type="text"></div><br>
-		<div class="name_form_add">Комментарий</div><div class="in_login in_name in_description"><input type="text"></div><br>
-		Изображение<br>
-		категория<br>
-		метки<br>
+	{% if user.is_authenticated %}
+
+	    <form action="{% url 'cook:add_new_recipe' %}" method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+
+			<h1 class="h_title">Форма добавления рецепта</h1>
+			<div class="name_form_add">Название рецепта</div><div class="in_login in_name"><input type="text" id="recipe_name" name="recipe_name"></div><br>
+			<!--
+			<div class="name_form_add">Краткое описание</div><div class="in_login in_name in_description"><input type="text"></div><br>
+			<div class="name_form_add">Ингридиенты</div><div class="in_login in_name in_ingredient"><input type="text"></div><br>
+			<div class="name_form_add">Приготовление</div><div class="in_login in_name in_preparative"><input type="text"></div><br>
+			<div class="name_form_add">Комментарий</div><div class="in_login in_name in_description"><input type="text"></div><br>
+			Изображение<br>
+			категория<br>
+			метки<br>
+			-->
+			<input type="submit" value="Добавить рецепт" />
+	    </form>
+	{% else %}
+	    <p>Необходимо залогиниться, чтобы добавлять рецепты!</p>
+	{% endif %}
 </div>
 
 {% endblock %}

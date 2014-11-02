@@ -7,6 +7,7 @@ from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth import authenticate, login
 
 from cook.models import *
+from cook.forms import *
 
 def test_page(request):
 	context = { }
@@ -15,6 +16,26 @@ def test_page(request):
 def add_recipe_page(request):
 	context = { }
 	return render(request, 'cook/add_recipe.html', context)
+
+def add_new_recipe(request):
+	# if this is a POST request we need to process the form data
+	if request.method == 'POST':
+		# create a form instance and populate it with data from the request:
+		form = AddRecipeForm(request.POST)
+		# check whether it's valid:
+		if form.is_valid():
+			# process the data in form.cleaned_data as required
+			# ...
+			
+			# redirect to a new URL:
+			return HttpResponseRedirect(reverse_lazy('cook:recipes_list'))
+			# return HttpResponseRedirect('/thanks/?text=%s' % form.cleaned_data['recipe_name'])
+
+	# if a GET (or any other method) we'll create a blank form
+	# else:
+	# 	form = NameForm()
+
+	return HttpResponseRedirect(reverse_lazy('cook:recipes_list'))
 
 def review_recipes_page(request):
 	context = { }
@@ -60,4 +81,3 @@ def login_action(request):
 		pass
 		# Return an 'invalid login' error message.
 	return HttpResponseRedirect(reverse_lazy('cook:index'))
-	
