@@ -18,7 +18,7 @@
 		<div class="inputsite">
 			{% if user.is_authenticated %}
 			    <div>Добро пожаловать, {{ user.username }}</div>
-				<a href="{% url 'cook:logout' %}">Выйти</a><br><br>
+				<a href="{% url 'cook:logout' %}" value="Войти" class="btn_exit">Выйти</a><br><br>
 			{% else %}
 				<input type="submit" onclick="javascript:window.location='#win'" value="Войти" class="but_login" id="win_pop"><br><br>
 			{% endif %}
