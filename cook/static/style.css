@@ -76,7 +76,7 @@ input[type="text"]:focus::-moz-placeholder {
 
 .btn_exit,
 input[type="submit"] {
-	margin: 0 0 17px 10px;
+	margin: 24px 0 -8px 10px;
 	height: 30px;
 	border: 1px solid #8cd148;  
 	font-weight: bold;
