@@ -101,7 +101,7 @@ input[type="submit"] {
 	margin: 5px 0 10px 0;
 }
 
-.btn_exit:hover {
+.btn_logout:hover {
 	color: white;
 	cursor: default;
 }
