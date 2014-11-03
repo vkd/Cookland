@@ -5,67 +5,67 @@
 
 <script>
 	window.onload = function () {
-	    document.getElementById("ul").onclick = function a(e) {
-	        e = e || event;
-	        var target = e.target || e.srcElement;
-	        if (target.tagName == "LI") {
-	            document.getElementById(target.className).style.display = document.getElementById(target.className).style.display == "block" ? "none" : "block";
-	            target.style.listStyleImage = document.getElementById(target.className).style.display == "block" ? "url({% static "style/down_tail.png" %})" : "url({% static "style/arrow.png" %})";
-	            //alert("v");
-	        }
-	    }
+		document.getElementById("ul").onclick = function a(e) {
+			e = e || event;
+			var target = e.target || e.srcElement;
+			if (target.tagName == "LI") {
+				document.getElementById(target.className).style.display = document.getElementById(target.className).style.display == "block" ? "none" : "block";
+				target.style.listStyleImage = document.getElementById(target.className).style.display == "block" ? "url({% static "style/down_tail.png" %})" : "url({% static "style/arrow.png" %})";
+			//alert("v");
+			}
+		}
 	}
 </script>
 	
-		<h1 class="h_title">Закуски</h1>
-		<p>Всего в категории n-рецептов</p>
+<h1 class="h_title">Закуски</h1>
+<p>Всего в категории n-рецептов</p>
 
-		<ul class="list_img" id="ul">
-			<li class="c1">Подкатегории</li>
-				<ul id="c1" class="list_imgs">
-					<li><a href="">Мясо</a></li>
-					<li><a href="">Рыба</a></li>
-					<li><a href="">Овощи</a></li>
-					<li><a href="">Яйца</a></li>
-				</ul>
+<ul class="list_img" id="ul">
+	<li class="c1">Подкатегории</li>
+		<ul id="c1" class="list_imgs">
+			<li><a href="">Мясо</a></li>
+			<li><a href="">Рыба</a></li>
+			<li><a href="">Овощи</a></li>
+			<li><a href="">Яйца</a></li>
 		</ul>
+</ul>
 
-		<hr>
-		<div class="prew_recipes">
-			<img src="{% static "style/test_1.jpg" %}">
-			<a href="{% url 'cook:review_recipes' %}">Название рецепта</a>
-			<h2>Ингридиенты:</h2>
-			<p>500 г рыбы, 200 г лука, 150 г моркови, 15 г желатина, 3 лавровых листа, 5 шт. душистого перца, 5 бутончиков гвоздики, соль   для украшения: яйцо, зелень, клюква, 3 лавровых листа, 5 шт. душистого перца, 3 лавровых листа, 5 шт. душистого перца.
-			</p>
-		</div>
-		<hr>
+<hr>
+<div class="prew_recipes">
+	<img src="{% static "style/test_1.jpg" %}">
+	<a href="{% url 'cook:review_recipes' %}">Название рецепта</a>
+	<h2>Ингридиенты:</h2>
+	<p>500 г рыбы, 200 г лука, 150 г моркови, 15 г желатина, 3 лавровых листа, 5 шт. душистого перца, 5 бутончиков гвоздики, соль   для украшения: яйцо, зелень, клюква, 3 лавровых листа, 5 шт. душистого перца, 3 лавровых листа, 5 шт. душистого перца.
+	</p>
+</div>
+<hr>
 
-		<div class="prew_recipes">
-			<img src="{% static "style/test_1.jpg" %}">
-			<a href="">Название рецепта</a>
-			<h2>Ингридиенты:</h2>
-			<p>500 г рыбы, 200 г лука, 150 г моркови, 15 г желатина, 3 лавровых листа, 5 шт. душистого перца, 5 бутончиков гвоздики, соль   для украшения: яйцо, зелень, клюква, 3 лавровых листа, 5 шт. душистого перца, 3 лавровых листа, 5 шт. душистого перца.
-			</p>
-		</div>
-		<hr>
+<div class="prew_recipes">
+	<img src="{% static "style/test_1.jpg" %}">
+	<a href="">Название рецепта</a>
+	<h2>Ингридиенты:</h2>
+	<p>500 г рыбы, 200 г лука, 150 г моркови, 15 г желатина, 3 лавровых листа, 5 шт. душистого перца, 5 бутончиков гвоздики, соль   для украшения: яйцо, зелень, клюква, 3 лавровых листа, 5 шт. душистого перца, 3 лавровых листа, 5 шт. душистого перца.
+	</p>
+</div>
+<hr>
 
-		<div class="prew_recipes">
-			<img src="{% static "style/test_1.jpg" %}">
-			<a href="">Название рецепта</a>
-			<h2>Ингридиенты:</h2>
-			<p>500 г рыбы, 200 г лука, 150 г моркови, 15 г желатина, 3 лавровых листа, 5 шт. душистого перца, 5 бутончиков гвоздики, соль   для украшения: яйцо, зелень, клюква, 3 лавровых листа, 5 шт. душистого перца, 3 лавровых листа, 5 шт. душистого перца.
-			</p>
-		</div>
-		<hr>
+<div class="prew_recipes">
+	<img src="{% static "style/test_1.jpg" %}">
+	<a href="">Название рецепта</a>
+	<h2>Ингридиенты:</h2>
+	<p>500 г рыбы, 200 г лука, 150 г моркови, 15 г желатина, 3 лавровых листа, 5 шт. душистого перца, 5 бутончиков гвоздики, соль   для украшения: яйцо, зелень, клюква, 3 лавровых листа, 5 шт. душистого перца, 3 лавровых листа, 5 шт. душистого перца.
+	</p>
+</div>
+<hr>
 
-		<div class="prew_recipes">
-			<img src="{% static "style/test_1.jpg" %}">
-			<a href="">Название рецепта</a>
-			<h2>Ингридиенты:</h2>
-			<p>500 г рыбы, 200 г лука, 150 г моркови, 15 г желатина, 3 лавровых листа, 5 шт. душистого перца, 5 бутончиков гвоздики, соль   для украшения: яйцо, зелень, клюква, 3 лавровых листа, 5 шт. душистого перца, 3 лавровых листа, 5 шт. душистого перца.
-			</p>
-		</div>
-		<hr>
+<div class="prew_recipes">
+	<img src="{% static "style/test_1.jpg" %}">
+	<a href="">Название рецепта</a>
+	<h2>Ингридиенты:</h2>
+	<p>500 г рыбы, 200 г лука, 150 г моркови, 15 г желатина, 3 лавровых листа, 5 шт. душистого перца, 5 бутончиков гвоздики, соль   для украшения: яйцо, зелень, клюква, 3 лавровых листа, 5 шт. душистого перца, 3 лавровых листа, 5 шт. душистого перца.
+	</p>
+</div>
+<hr>
 
 
 

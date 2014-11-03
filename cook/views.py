@@ -26,16 +26,17 @@ def add_new_recipe(request):
 		if form.is_valid():
 			# process the data in form.cleaned_data as required
 			# ...
-			
+			r = Recipe(name=form.cleaned_data['recipe_name'])
+			r.save()
 			# redirect to a new URL:
-			return HttpResponseRedirect(reverse_lazy('cook:recipes_list'))
+			return HttpResponseRedirect(reverse_lazy('cook:recipes'))
 			# return HttpResponseRedirect('/thanks/?text=%s' % form.cleaned_data['recipe_name'])
 
 	# if a GET (or any other method) we'll create a blank form
 	# else:
 	# 	form = NameForm()
 
-	return HttpResponseRedirect(reverse_lazy('cook:recipes_list'))
+	return HttpResponseRedirect(reverse_lazy('cook:add_recipe'))
 
 def review_recipes_page(request):
 	context = { }
