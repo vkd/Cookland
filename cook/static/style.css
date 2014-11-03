@@ -42,7 +42,6 @@ input[type="text"],
 input[type="submit"] {
 	height: 30px;
 	font: 14px;
-	border: 1px solid #27408B;
 	border-radius: 2px;
     margin-bottom: -10px;
 }
@@ -52,6 +51,7 @@ input[type="text"] {
     width: 230px;
     opacity: 0.8;
     box-shadow: 0 0 1px 1px rgba(0,0,0,0);
+    border: 1px solid #27408B;
 }
 
 .search input[type="text"]:focus,
@@ -74,10 +74,13 @@ input[type="text"]:focus::-moz-placeholder {
 	padding-left: 7px;
 }
 
-.btn_exit,
 input[type="submit"] {
 	margin: 24px 0 -8px 10px;
 	height: 30px;
+}
+
+.btn_green {
+	width: 100px;
 	border: 1px solid #8cd148;  
 	font-weight: bold;
 	color: #fff; 
@@ -87,7 +90,7 @@ input[type="submit"] {
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
-.btn_exit {
+.btn_logout {
 	display: block;
 	width: 100px;
 	float: right;
@@ -101,10 +104,6 @@ input[type="submit"] {
 .btn_exit:hover {
 	color: white;
 	cursor: default;
-}
-
-.but_login {
-	width: 100px;
 }
 
 /*Шапка сайта*/

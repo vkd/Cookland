@@ -18,9 +18,9 @@
 		<div class="inputsite">
 			{% if user.is_authenticated %}
 			    <div>Добро пожаловать, {{ user.username }}</div>
-				<a href="{% url 'cook:logout' %}" value="Войти" class="btn_exit">Выйти</a><br><br>
+				<a href="{% url 'cook:logout' %}" value="Войти" class="btn_green btn_logout">Выйти</a><br><br>
 			{% else %}
-				<input type="submit" onclick="javascript:window.location='#win'" value="Войти" class="but_login" id="win_pop"><br><br>
+				<input type="submit" onclick="javascript:window.location='#win'" value="Войти" class="btn_green" id="win_pop"><br><br>
 			{% endif %}
 		</div>
 		<!--lightbox-->
@@ -54,7 +54,7 @@
 	<footer class="footer-page">
 	<div class="subscription">
 		<input type="text" name="email" placeholder="Подписаться на новые рецепты">
-		<input type="submit" value="Подписаться" class="but_subscription">
+		<input type="submit" value="Подписаться" class="btn_green but_subscription">
 	</div>
 		Вкус творчества 2014<br>
 		Контанкты: <a href="mailto:python.ea@gmail.com" class="a_mail">python.ea@gmail.com</a><br>
