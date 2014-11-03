@@ -7,7 +7,7 @@
 
 	{% if user.is_authenticated %}
 
-	    <form action="{% url 'cook:add_new_recipe' %}" method="post">
+	    <form action="{% url 'cook:add_recipe' %}" method="post">
 			{% csrf_token %}
 			{{ form.as_p }}
 

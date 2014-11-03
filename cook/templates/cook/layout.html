@@ -23,7 +23,7 @@
 </div>
 	<br><br>
 	<div class="container">
-		<section class="content">		
+		<section class="content">
 	{% block content_block %}
 	{% endblock %}
 		</section>
@@ -34,9 +34,9 @@
 				{% if user.is_authenticated %}
 					<li class="imgmarker"><a href="{% url 'cook:add_recipe' %}">Добавить рецепт</a></li>
 				{% endif %}
-				<li class="imgmarker"><a href="{% url 'cook:test' %}">Вторые блюда</a></li>
+				<li class="imgmarker"><a href="">Вторые блюда</a></li>
 				<li class="imgmarker"><a href="">Салаты</a></li>
-				<li class="imgmarker"><a href="{% url 'cook:recipes_list' %}">Закуски</a></li>
+				<li class="imgmarker"><a href="{% url 'cook:recipes' %}">Закуски</a></li>
 				<li class="imgmarker"><a href="">Выпечка</a></li>
 				<li class="imgmarker"><a href="">Завтраки</a></li>
 				<li class="imgmarker"><a href="">Десерты</a></li>

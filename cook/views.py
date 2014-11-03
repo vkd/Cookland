@@ -9,42 +9,40 @@ from django.contrib.auth import authenticate, login
 from cook.models import *
 from cook.forms import *
 
-def test_page(request):
-	context = { }
-	return render(request, 'cook/test.html', context)
+def add_recipe(request):
+	if request.user.is_authenticated():
+		if request.method == 'POST':
+			form = AddRecipeForm(request.POST)
+			if form.is_valid():
+				r = Recipe(name=form.cleaned_data['recipe_name'])
+				r.save()
 
-def add_recipe_page(request):
-	context = { }
-	return render(request, 'cook/add_recipe.html', context)
+				return HttpResponseRedirect(reverse_lazy('cook:recipes'))
+		else:
+			context = { }
+			return render(request, 'cook/add_recipe.html', context)
+	else:
+		return HttpResponseRedirect(reverse_lazy('cook:index'))
 
-def add_new_recipe(request):
-	# if this is a POST request we need to process the form data
-	if request.method == 'POST':
-		# create a form instance and populate it with data from the request:
-		form = AddRecipeForm(request.POST)
-		# check whether it's valid:
-		if form.is_valid():
-			# process the data in form.cleaned_data as required
-			# ...
-			r = Recipe(name=form.cleaned_data['recipe_name'])
-			r.save()
-			# redirect to a new URL:
-			return HttpResponseRedirect(reverse_lazy('cook:recipes'))
-			# return HttpResponseRedirect('/thanks/?text=%s' % form.cleaned_data['recipe_name'])
+def view_recipe(request, pk):
+	recipe = Recipe.objects.get(pk=pk)
+	context = { 'recipe': recipe }
+	return render(request, 'cook/view_recipe.html', context)
 
-	# if a GET (or any other method) we'll create a blank form
-	# else:
-	# 	form = NameForm()
+def delete_recipe(request, pk):
+	if request.user.is_authenticated():
+		recipe = Recipe.objects.get(pk=pk)
+		recipe.delete()
+		return HttpResponseRedirect(reverse_lazy('cook:recipes'))
+	else:
+		return HttpResponseRedirect(reverse_lazy('cook:index'))
 
-	return HttpResponseRedirect(reverse_lazy('cook:add_recipe'))
-
-def review_recipes_page(request):
-	context = { }
-	return render(request, 'cook/review_recipes.html', context)
-
-def recipes_list_page(request):
-	context = { }
-	return render(request, 'cook/recipes_list.html', context)
+def edit_recipe(request, pk):
+	if request.user.is_authenticated():
+		recipe = Recipe.objects.get(pk=pk)
+		return HttpResponseRedirect(reverse_lazy('cook:recipes'))
+	else:
+		return HttpResponseRedirect(reverse_lazy('cook:index'))
 
 def index(request):
 	#try:
@@ -55,18 +53,14 @@ def index(request):
 	context = { }
 	return render(request, 'cook/index.html', context)
 
-def form_input(request):
-	context = { }
-	return render(request, 'cook/form_input.html', context)
-
 def custom_not_found_page(request):
 	context = { }
 	return render(request, 'cook/404.html', context)
 
-def recipes_list(request):
+def recipes(request):
 	context = { 'recipes' : Recipe.objects.all() }
 	return render(request, 'cook/recipes.html', context)
-	
+
 def login_action(request):
 	username = request.POST['login']
 	password = request.POST['password']
