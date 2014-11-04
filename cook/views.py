@@ -14,7 +14,10 @@ def add_recipe(request):
 		if request.method == 'POST':
 			form = AddRecipeForm(request.POST)
 			if form.is_valid():
-				r = Recipe(name=form.cleaned_data['recipe_name'])
+				r = Recipe(
+					name=form.cleaned_data['recipe_name'],
+					discribe=form.cleaned_data['discribe']
+				)
 				r.save()
 
 				return HttpResponseRedirect(reverse_lazy('cook:recipes'))
@@ -39,8 +42,12 @@ def delete_recipe(request, pk):
 
 def edit_recipe(request, pk):
 	if request.user.is_authenticated():
-		recipe = Recipe.objects.get(pk=pk)
-		return HttpResponseRedirect(reverse_lazy('cook:recipes'))
+		# recipe = Recipe.objects.get(pk=pk)
+		# form = AddRecipeForm(instance=recipe)
+		context = { }
+		# context = { 'from': form }
+		return render(request, 'cook/add_recipe.html', context)
+		# return HttpResponseRedirect(reverse_lazy('cook:recipes'))
 	else:
 		return HttpResponseRedirect(reverse_lazy('cook:index'))
 
