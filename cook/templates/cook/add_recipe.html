@@ -7,14 +7,18 @@
 
 	{% if user.is_authenticated %}
 
-	    <form action="{% url 'cook:add_recipe' %}" method="post">
+	    <form action="{% url 'cook:add_recipe' %}" method="post" class="add_recipe">
 			{% csrf_token %}
 			{{ form.as_p }}
-
 			<h1 class="h_title">Форма добавления рецепта</h1>
-			<div class="name_form_add">Название рецепта</div><div class="in_login in_name"><input type="text" id="recipe_name" name="recipe_name"></div><br>
-			<div class="name_form_add">Описание</div><div class="in_login in_name"><input type="text" id="discribe" name="discribe"></div><br>
+			<div class="add_left_block">
+			<img src="{% static "style/not_img.jpg" %}"><br>
+			<input type="submit" value="Выбрать файл" class="btn_green btn_add_file" />
+			</div>
+			<div class="in_login in_name"><input type="text" id="recipe_name" name="recipe_name" placeholder="Название рецепта"></div>
+			<p><textarea placeholder="Краткое описание рецепта" class="in_description"></textarea></p>
 			<!--
+			<div class="in_login brief_description"><input type="text" id="discribe" name="discribe" placeholder="Краткое описание рецепта"></div><br>
 			<div class="name_form_add">Краткое описание</div><div class="in_login in_name in_description"><input type="text"></div><br>
 			<div class="name_form_add">Ингридиенты</div><div class="in_login in_name in_ingredient"><input type="text"></div><br>
 			<div class="name_form_add">Приготовление</div><div class="in_login in_name in_preparative"><input type="text"></div><br>
@@ -23,7 +27,7 @@
 			категория<br>
 			метки<br>
 			-->
-			<input type="submit" value="Добавить рецепт" />
+			<input type="submit" value="Добавить рецепт" class="btn_green but_subscription" />
 	    </form>
 	{% else %}
 	    <p>Необходимо залогиниться, чтобы добавлять рецепты!</p>

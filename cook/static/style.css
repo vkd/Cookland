@@ -30,6 +30,11 @@ a {
 	color: #4F4F4F;
 }
 
+textarea {
+	border: 1px solid #DCDCDC;
+	padding: 3px;
+}
+
 a:hover {
 	color: #B22222;
 }
@@ -74,11 +79,6 @@ input[type="text"]:focus::-moz-placeholder {
 	padding-left: 7px;
 }
 
-input[type="submit"] {
-	margin: 24px 0 -8px 10px;
-	height: 30px;
-}
-
 .btn_green {
 	width: 100px;
 	border: 1px solid #8cd148;  
@@ -104,6 +104,11 @@ input[type="submit"] {
 .btn_logout:hover {
 	color: white;
 	cursor: default;
+}
+
+.btn_login {
+	margin: 24px 0 -8px 10px;
+	height: 30px;
 }
 
 /*Шапка сайта*/

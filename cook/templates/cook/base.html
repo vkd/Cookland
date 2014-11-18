@@ -20,7 +20,7 @@
 			    <div>Добро пожаловать, {{ user.username }}</div>
 				<a href="{% url 'cook:logout' %}" value="Войти" class="btn_green btn_logout">Выйти</a><br><br>
 			{% else %}
-				<input type="submit" onclick="javascript:window.location='#win'" value="Войти" class="btn_green" id="win_pop"><br><br>
+				<input type="submit" onclick="javascript:window.location='#win'" value="Войти" class="btn_green btn_login" id="win_pop"><br><br>
 			{% endif %}
 		</div>
 		<!--lightbox-->
