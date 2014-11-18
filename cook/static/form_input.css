@@ -202,9 +202,21 @@ input[type="checkbox"]:checked + label span {
 }
 
 .in_description {
-	height: 150px;
-	width: 75%;
+	height: 50px;
+	width: 74.7%;
 }
+
+.ingredients {
+	height: 142px;
+	width: 74.7%;
+}
+
+.cooking {
+	height: 300px;
+	width: 96.3%;
+	margin-left: 20px;
+}
+
 /*
 brief_description input[type="text"] {
 	width: 75%;
