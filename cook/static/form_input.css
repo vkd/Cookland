@@ -66,8 +66,9 @@ label {
 	border-bottom-right-radius: 2px;
 }
 
-input[type="checkbox"] {
-	display: none;
+input[type="checkbox"] { 
+	position: absolute;
+    left: -9999px;
 }
 
 input[type="checkbox"] + label span {
@@ -217,19 +218,24 @@ input[type="checkbox"]:checked + label span {
 	margin-left: 20px;
 }
 
-/*
-brief_description input[type="text"] {
-	width: 75%;
-	height: 150px;
-	vertical-align: top;
-	line-height: 15px;
+.comments {
+	height: 100px;
+	width: 96.3%;
+	margin-left: 20px;
 }
 
-.in_ingredient input[type="text"] {
-	height: 300px;
+.categorys_recipes { /*select*/
+	margin-left: 20px;
 }
 
-.in_preparative input[type="text"] {
-	height: 500px;
+.labels {
+	margin: 20px 0 0 20px;
 }
-*/
+
+.h_labels {
+	color: #008B00;
+	font-weight: normal;
+	font-size: 16px;
+	margin-left: 20px;
+}
+

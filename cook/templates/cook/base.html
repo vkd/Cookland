@@ -18,7 +18,7 @@
 		<div class="inputsite">
 			{% if user.is_authenticated %}
 			    <div>Добро пожаловать, {{ user.username }}</div>
-				<a href="{% url 'cook:logout' %}" value="Войти" class="btn_green btn_logout">Выйти</a><br><br>
+				<input type="submit" onclick="javascript:window.location='{% url 'cook:logout' %}'" value="Выйти" class="btn_green btn_logout"><br><br>
 			{% else %}
 				<input type="submit" onclick="javascript:window.location='#win'" value="Войти" class="btn_green btn_login" id="win_pop"><br><br>
 			{% endif %}
@@ -31,7 +31,7 @@
 				<h1 class="h_loginform">Войти на сайт</h1>
 				<div class="inputname">Логин:</div><div class="in_login"><input type="text" name="login"></div><br>
 				<div class="inputname">Пароль:</div><div class="in_login"><input type="password" name="password"></div><br>
-				<input type="checkbox" id="check" />
+				<input type="checkbox" id="check" class="check_inlogin" />
 				<label for="check"><span></span>Запомнить меня</label>
 				<input type="submit" value="Войти" class="submit_login"><br><br>
 				<a href="" class="a_forminput">Забыли пароль?</a>

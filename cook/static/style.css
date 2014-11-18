@@ -91,14 +91,7 @@ input[type="text"]:focus::-moz-placeholder {
 }
 
 .btn_logout {
-	display: block;
-	width: 100px;
-	float: right;
-	text-align: center;
-	vertical-align: middle;
-	padding-top: 5px;
-	height: 25px;
-	margin: 5px 0 10px 0;
+	margin: 6px 0 10px 0;
 }
 
 .btn_logout:hover {

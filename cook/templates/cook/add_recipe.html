@@ -19,14 +19,26 @@
 			<p><textarea placeholder="Краткое описание рецепта" class="in_description"></textarea></p>
 			<p><textarea placeholder="Ингридиенты" class="ingredients"></textarea></p>
 			<p><textarea placeholder="Процесс приготовления" class="cooking"></textarea></p>
-			<!--
-			<div class="name_form_add">Приготовление</div><div class="in_login in_name in_preparative"><input type="text"></div><br>
-			<div class="name_form_add">Комментарий</div><div class="in_login in_name in_description"><input type="text"></div><br>
-			Изображение<br>
-			категория<br>
-			метки<br>
-			-->
-			<input type="submit" value="Добавить рецепт" class="btn_green but_subscription" />
+			<p><textarea placeholder="Комментарии автора к рецепту" class="comments"></textarea></p>
+			<p><form class="labels">
+				<h2 class="h_labels">Выберите метки, соответствующие рецепту:</h2>
+				<ul style="list-style: none;">
+					<li><input type="checkbox" id="checkbox-id" /> <label for="checkbox-id"><span></span>Мясо</label></li>
+				</ul>
+			</form></p>
+			<select class="categorys_recipes">
+				<option>Выберете категорию рецепта</option>
+				<option>Первые блюда</option>
+				<option>Вторые блюда</option>
+				<option>Салаты</option>
+				<option>Закуски</option>
+				<option>Выпечка</option>
+				<option>Завтраки</option>
+				<option>Десерты</option>
+				<option>Идеи для пикника</option>
+				<option>Напитки</option>
+			</select><br>
+			<p><input type="submit" value="Добавить рецепт" class="btn_green but_subscription" /></p>
 	    </form>
 	{% else %}
 	    <p>Необходимо залогиниться, чтобы добавлять рецепты!</p>
