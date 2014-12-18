@@ -69,4 +69,4 @@ docs/_build/
 sftp-config.json
 
 # sqlite
-.sqlite3
+*.sqlite3
