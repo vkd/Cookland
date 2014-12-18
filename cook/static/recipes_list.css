@@ -20,7 +20,7 @@ hr {
 }
 
 .prew_recipes a {
-	display: block;
+	display: inline;
 	height: 30px;
 	padding: 5px 0 0 5px;
 	font-weight: normal;
