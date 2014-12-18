@@ -67,3 +67,6 @@ docs/_build/
 
 # sftp configuration file
 sftp-config.json
+
+# sqlite
+.sqlite3
