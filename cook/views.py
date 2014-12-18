@@ -72,7 +72,7 @@ def custom_not_found_page(request):
 
 
 def recipes(request):
-    context = {'recipes': Recipe.objects.all()}
+    context = {'recipes': Recipe.objects.all().order_by('-date_create')}
     return render(request, 'cook/recipes.html', context)
 
 

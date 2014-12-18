@@ -15,6 +15,7 @@ class Recipe(models.Model):
     discribe = models.TextField()
     #image = models.ImageField(blank=True)
     tags = models.ManyToManyField(Tag, related_name='recipes', through='Recipe_Tags')
+    date_create = models.DateTimeField(auto_now_add=True, editable=False)
 
 
 class Recipe_Tags(models.Model):
