@@ -1,20 +1,25 @@
 from django.contrib import admin
 from cook.models import *
 
+
 class TagAdmin(admin.ModelAdmin):
-	list_display = ('name', )
+    list_display = ('name', )
+
 
 class ProduceAdmin(admin.ModelAdmin):
-	list_display = ('name', )
+    list_display = ('name', )
+
 
 class RecipeAdmin(admin.ModelAdmin):
-	list_display = ('name', )
+    list_display = ('name', )
+
 
 class IngredientAdmin(admin.ModelAdmin):
-	list_display = ('value', 'produce', 'recipe', )
+    list_display = ('value', 'produce', 'recipe', )
+
 
 class Recipe_TagsAdmin(admin.ModelAdmin):
-	pass;
+    pass
 
 # Register your models here.
 admin.site.register(Recipe, RecipeAdmin)
