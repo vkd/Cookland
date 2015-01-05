@@ -39,7 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'cookland',
     'cook',
-    'bugtracker'
+    'bugtracker',
+    'widget_tweaks',
 )
 
 MIDDLEWARE_CLASSES = (

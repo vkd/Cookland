@@ -17,7 +17,7 @@ def add_recipe(request):
             if form.is_valid():
                 r = Recipe(
                     name=form.cleaned_data['recipe_name'],
-                    # discribe=form.cleaned_data['discribe']
+                    discribe=form.cleaned_data['discribe']
                 )
                 r.save()
 

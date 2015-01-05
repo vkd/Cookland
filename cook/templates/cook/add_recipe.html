@@ -2,6 +2,7 @@
 {% block layout_block %}
 
 {% load staticfiles %}
+{% load widget_tweaks %}
 
 <div class="container">
 
@@ -9,10 +10,10 @@
         <form action="{% url 'cook:add_recipe' %}" method="post" class="add_recipe">
             {% csrf_token %}
             <h1 class="h_title">Форма добавления рецепта</h1>
-<!--            <div class="add_left_block">
+            <div class="add_left_block">
             <img src="{% static "style/not_img.jpg" %}"><br>
             <input type="submit" value="Выбрать файл" class="btn_green btn_add_file" />
-            </div> -->
+            </div>
 
             {% if error_msg %}
                 <h1 class="h_title">Ошибка: {{ error_msg }}</h1>
@@ -21,14 +22,19 @@
             {{ form.errors }}
             <div class="in_login in_name">
                 {{ form.recipe_name.errors }}
-                <label for="{{ form.recipe_name.id_for_label }}">Название рецепта</label>
-                {{ form.recipe_name }}
+                <!-- <label for="{{ form.recipe_name.id_for_label }}">Название рецепта</label> -->
+                {% render_field form.recipe_name placeholder="Название рецепта" %}
             </div>
-<!--            <div class="in_login in_name"><input type="text" id="recipe_name" name="recipe_name" placeholder="Название рецепта"></div> -->
-<!--            <p><textarea placeholder="Краткое описание рецепта" class="in_description"></textarea></p>
+            <p>
+                {{ form.discribe.errors }}
+                <!-- <label for="{{ form.discribe.id_for_label }}">Краткое описание рецепта</label> -->
+                {% render_field form.discribe placeholder="Краткое описание рецепта" class+="in_description" %}
+            </p>
+            <!-- <div class="in_login in_name"><input type="text" id="recipe_name" name="recipe_name" placeholder="Название рецепта"></div> -->
+            <!-- <p><textarea placeholder="Краткое описание рецепта" class="in_description"></textarea></p> -->
             <p><textarea placeholder="Ингридиенты" class="ingredients"></textarea></p>
             <p><textarea placeholder="Процесс приготовления" class="cooking"></textarea></p>
-            <p><textarea placeholder="Комментарии автора к рецепту" class="comments"></textarea></p> -->
+            <p><textarea placeholder="Комментарии автора к рецепту" class="comments"></textarea></p>
 <!--            <p><form class="labels">
                 <h2 class="h_labels">Выберите метки, соответствующие рецепту:</h2>
                 <ul style="list-style: none;">
