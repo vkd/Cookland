@@ -5,7 +5,7 @@
 {% load widget_tweaks %}
 
 <div class="container">
-
+<div class="add_content">
     {% if user.is_authenticated %}
         <form action="{% url 'cook:add_recipe' %}" method="post" class="add_recipe">
             {% csrf_token %}
@@ -35,13 +35,12 @@
             <p><textarea placeholder="Ингридиенты" class="ingredients"></textarea></p>
             <p><textarea placeholder="Процесс приготовления" class="cooking"></textarea></p>
             <p><textarea placeholder="Комментарии автора к рецепту" class="comments"></textarea></p>
-<!--            <p><form class="labels">
-                <h2 class="h_labels">Выберите метки, соответствующие рецепту:</h2>
+<!--            <p><h2 class="h_labels">Выберите метки, соответствующие рецепту:</h2>
                 <ul style="list-style: none;">
                     <li><input type="checkbox" id="checkbox-id" /> <label for="checkbox-id"><span></span>Мясо</label></li>
-                </ul>
-            </form></p> -->
-<!--            <select class="categorys_recipes">
+                </ul></p> -->
+            <div class="select_box">
+            <select>
                 <option>Выберете категорию рецепта</option>
                 <option>Первые блюда</option>
                 <option>Вторые блюда</option>
@@ -52,12 +51,14 @@
                 <option>Десерты</option>
                 <option>Идеи для пикника</option>
                 <option>Напитки</option>
-            </select><br> -->
-            <p><input type="submit" value="Добавить рецепт" class="btn_green but_subscription" /></p>
+            </select>
+            </div>
+            <input type="submit" value="Добавить рецепт" class="btn_green but_add_recipe" />
         </form>
     {% else %}
         <p>Необходимо залогиниться, чтобы добавлять рецепты!</p>
     {% endif %}
+</div>
 </div>
 
 {% endblock %}

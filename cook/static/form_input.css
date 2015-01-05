@@ -172,12 +172,15 @@ input[type="checkbox"]:checked + label span {
 }
 
 /*Форма добавления рецепта*/
+.add_content {
+	padding: 0 0 30px 20px;
+}
+
 .name_form_add {
 	width: 150px;
 	text-align: left;
 	margin-top: 30px;
 	float: left;
-	margin-left: 20px;
 }
 
 .in_name input[type="text"] {
@@ -187,7 +190,7 @@ input[type="checkbox"]:checked + label span {
 
 .add_recipe img {
 	width: 200px;
-	margin: 20px 20px 0 20px;
+	margin: 20px 20px 0 0px;
 	border-radius: 3px;
 	border: 1px solid gray;
 }
@@ -199,7 +202,7 @@ input[type="checkbox"]:checked + label span {
 .btn_add_file {
 	width: 150px;
 	display: block;
-	margin: 10px auto 20px auto;
+	margin: 10px 26px 20px 26px;
 }
 
 .in_description {
@@ -215,21 +218,15 @@ input[type="checkbox"]:checked + label span {
 .cooking {
 	height: 300px;
 	width: 96.3%;
-	margin-left: 20px;
 }
 
 .comments {
 	height: 100px;
 	width: 96.3%;
-	margin-left: 20px;
-}
-
-.categorys_recipes { /*select*/
-	margin-left: 20px;
 }
 
 .labels {
-	margin: 20px 0 0 20px;
+	margin: 20px 0 0 0px;
 }
 
 .h_labels {
@@ -239,3 +236,15 @@ input[type="checkbox"]:checked + label span {
 	margin-left: 20px;
 }
 
+.select_box select {
+	float: left;
+	padding: 5px;
+	border: 1px solid #427212;
+}
+
+.but_add_recipe {
+	width: 150px;
+	position: relative;
+	left: 600px;
+	margin-bottom: 30px;
+}
