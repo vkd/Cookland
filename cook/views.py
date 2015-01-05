@@ -13,18 +13,21 @@ from cook.forms import *
 def add_recipe(request):
     if request.user.is_authenticated():
         if request.method == 'POST':
-            form = AddRecipeForm(request.POST)
+            form = AddRecipeForm(data=request.POST)
             if form.is_valid():
                 r = Recipe(
                     name=form.cleaned_data['recipe_name'],
-                    discribe=form.cleaned_data['discribe']
+                    # discribe=form.cleaned_data['discribe']
                 )
                 r.save()
 
                 return HttpResponseRedirect(reverse_lazy('cook:recipes'))
+            else:
+                context = {'error_msg': 'form is invalid', 'form': form}
         else:
-            context = {}
-            return render(request, 'cook/add_recipe.html', context)
+            context = {'form': AddRecipeForm() }
+
+        return render(request, 'cook/add_recipe.html', context)
     else:
         return HttpResponseRedirect(reverse_lazy('cook:index'))
 

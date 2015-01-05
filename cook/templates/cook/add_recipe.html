@@ -5,44 +5,53 @@
 
 <div class="container">
 
-	{% if user.is_authenticated %}
+    {% if user.is_authenticated %}
+        <form action="{% url 'cook:add_recipe' %}" method="post" class="add_recipe">
+            {% csrf_token %}
+            <h1 class="h_title">Форма добавления рецепта</h1>
+<!--            <div class="add_left_block">
+            <img src="{% static "style/not_img.jpg" %}"><br>
+            <input type="submit" value="Выбрать файл" class="btn_green btn_add_file" />
+            </div> -->
 
-	    <form action="{% url 'cook:add_recipe' %}" method="post" class="add_recipe">
-			{% csrf_token %}
-			{{ form.as_p }}
-			<h1 class="h_title">Форма добавления рецепта</h1>
-			<div class="add_left_block">
-			<img src="{% static "style/not_img.jpg" %}"><br>
-			<input type="submit" value="Выбрать файл" class="btn_green btn_add_file" />
-			</div>
-			<div class="in_login in_name"><input type="text" id="recipe_name" name="recipe_name" placeholder="Название рецепта"></div>
-			<p><textarea placeholder="Краткое описание рецепта" class="in_description"></textarea></p>
-			<p><textarea placeholder="Ингридиенты" class="ingredients"></textarea></p>
-			<p><textarea placeholder="Процесс приготовления" class="cooking"></textarea></p>
-			<p><textarea placeholder="Комментарии автора к рецепту" class="comments"></textarea></p>
-			<p><form class="labels">
-				<h2 class="h_labels">Выберите метки, соответствующие рецепту:</h2>
-				<ul style="list-style: none;">
-					<li><input type="checkbox" id="checkbox-id" /> <label for="checkbox-id"><span></span>Мясо</label></li>
-				</ul>
-			</form></p>
-			<select class="categorys_recipes">
-				<option>Выберете категорию рецепта</option>
-				<option>Первые блюда</option>
-				<option>Вторые блюда</option>
-				<option>Салаты</option>
-				<option>Закуски</option>
-				<option>Выпечка</option>
-				<option>Завтраки</option>
-				<option>Десерты</option>
-				<option>Идеи для пикника</option>
-				<option>Напитки</option>
-			</select><br>
-			<p><input type="submit" value="Добавить рецепт" class="btn_green but_subscription" /></p>
-	    </form>
-	{% else %}
-	    <p>Необходимо залогиниться, чтобы добавлять рецепты!</p>
-	{% endif %}
+            {% if error_msg %}
+                <h1 class="h_title">Ошибка: {{ error_msg }}</h1>
+            {% endif %}
+
+            {{ form.errors }}
+            <div class="in_login in_name">
+                {{ form.recipe_name.errors }}
+                <label for="{{ form.recipe_name.id_for_label }}">Название рецепта</label>
+                {{ form.recipe_name }}
+            </div>
+<!--            <div class="in_login in_name"><input type="text" id="recipe_name" name="recipe_name" placeholder="Название рецепта"></div> -->
+<!--            <p><textarea placeholder="Краткое описание рецепта" class="in_description"></textarea></p>
+            <p><textarea placeholder="Ингридиенты" class="ingredients"></textarea></p>
+            <p><textarea placeholder="Процесс приготовления" class="cooking"></textarea></p>
+            <p><textarea placeholder="Комментарии автора к рецепту" class="comments"></textarea></p> -->
+<!--            <p><form class="labels">
+                <h2 class="h_labels">Выберите метки, соответствующие рецепту:</h2>
+                <ul style="list-style: none;">
+                    <li><input type="checkbox" id="checkbox-id" /> <label for="checkbox-id"><span></span>Мясо</label></li>
+                </ul>
+            </form></p> -->
+<!--            <select class="categorys_recipes">
+                <option>Выберете категорию рецепта</option>
+                <option>Первые блюда</option>
+                <option>Вторые блюда</option>
+                <option>Салаты</option>
+                <option>Закуски</option>
+                <option>Выпечка</option>
+                <option>Завтраки</option>
+                <option>Десерты</option>
+                <option>Идеи для пикника</option>
+                <option>Напитки</option>
+            </select><br> -->
+            <p><input type="submit" value="Добавить рецепт" class="btn_green but_subscription" /></p>
+        </form>
+    {% else %}
+        <p>Необходимо залогиниться, чтобы добавлять рецепты!</p>
+    {% endif %}
 </div>
 
 {% endblock %}
