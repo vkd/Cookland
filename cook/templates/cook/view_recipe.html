@@ -36,4 +36,9 @@
 </p>
 
 <h2 class="h_review appetite">Приятного аппетита!</h2>
+
+{% if user.is_authenticated %}
+	<a href="{% url 'cook:delete_recipe' recipe.pk %}" class="btn_green">Удалить</a>
+{% endif %}
+
 {% endblock %}
