@@ -17,6 +17,9 @@ class Recipe(models.Model):
     tags = models.ManyToManyField(Tag, related_name='recipes', through='Recipe_Tags')
     date_create = models.DateTimeField(auto_now_add=True, editable=False)
 
+    class Meta():
+        ordering = ('-date_create',)
+
 
 class Recipe_Tags(models.Model):
     recipe = models.ForeignKey(Recipe)
