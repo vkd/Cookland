@@ -184,13 +184,15 @@ input[type="checkbox"]:checked + label span {
 }
 
 .in_name input[type="text"] {
-	margin-top: 20px;
-	width: 75%;
+	width: 75.4%;
+	margin-bottom: 3px;
+	border: 1px solid #DCDCDC;
+	border-radius: 0px;
 }
 
 .add_recipe img {
 	width: 200px;
-	margin: 20px 20px 0 0px;
+	margin-right: 20px;
 	border-radius: 3px;
 	border: 1px solid gray;
 }
@@ -205,24 +207,30 @@ input[type="checkbox"]:checked + label span {
 	margin: 10px 26px 20px 26px;
 }
 
+.text_area {
+	border: 1px solid #DCDCDC;
+	padding: 5px;
+	resize: none;
+}
+
 .in_description {
 	height: 50px;
 	width: 74.7%;
 }
 
 .ingredients {
-	height: 142px;
+	height: 140px;
 	width: 74.7%;
 }
 
 .cooking {
 	height: 300px;
-	width: 96.3%;
+	width: 96.8%;
 }
 
 .comments {
 	height: 100px;
-	width: 96.3%;
+	width: 96.8%;
 }
 
 .labels {
@@ -239,12 +247,11 @@ input[type="checkbox"]:checked + label span {
 .select_box select {
 	float: left;
 	padding: 5px;
-	border: 1px solid #427212;
 }
 
 .but_add_recipe {
 	width: 150px;
+	float: right;
 	position: relative;
-	left: 600px;
-	margin-bottom: 30px;
+	right: 22px;
 }

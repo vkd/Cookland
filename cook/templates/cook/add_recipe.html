@@ -28,13 +28,13 @@
             <p>
                 {{ form.discribe.errors }}
                 <!-- <label for="{{ form.discribe.id_for_label }}">Краткое описание рецепта</label> -->
-                {% render_field form.discribe placeholder="Краткое описание рецепта" class+="in_description" %}
+                {% render_field form.discribe placeholder="Краткое описание рецепта" class+="in_description text_area" %}
             </p>
             <!-- <div class="in_login in_name"><input type="text" id="recipe_name" name="recipe_name" placeholder="Название рецепта"></div> -->
             <!-- <p><textarea placeholder="Краткое описание рецепта" class="in_description"></textarea></p> -->
-            <p><textarea placeholder="Ингридиенты" class="ingredients"></textarea></p>
-            <p><textarea placeholder="Процесс приготовления" class="cooking"></textarea></p>
-            <p><textarea placeholder="Комментарии автора к рецепту" class="comments"></textarea></p>
+            <p><textarea placeholder="Ингридиенты" class="ingredients text_area"></textarea></p>
+            <p><textarea placeholder="Процесс приготовления" class="cooking text_area"></textarea></p>
+            <p><textarea placeholder="Комментарии автора к рецепту" class="comments text_area"></textarea></p>
 <!--            <p><h2 class="h_labels">Выберите метки, соответствующие рецепту:</h2>
                 <ul style="list-style: none;">
                     <li><input type="checkbox" id="checkbox-id" /> <label for="checkbox-id"><span></span>Мясо</label></li>
