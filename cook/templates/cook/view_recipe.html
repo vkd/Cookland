@@ -39,7 +39,17 @@
 <h2 class="h_review appetite">Приятного аппетита!</h2>
 
 {% if user.is_authenticated %}
-	<a href="{% url 'cook:delete_recipe' recipe.pk %}" class="btn_green a_btn_green">Удалить</a>
+<div style="float: right;">
+	<div class="date">
+		Рецепт опубликован: 10.01.2015
+	</div>
+	<div class="icons">
+		<img src="{% static "style/change.png" %}" title="Изменить рецепт">
+		<!--<img src="{% static "style/accept.png" %}" title="Применить изменения">-->
+		<a href="{% url 'cook:delete_recipe' recipe.pk %}"><img src="{% static "style/del.png" %}" title="Удалить рецепт"></a>
+	</div>
+</div>
+	<!--<a href="{% url 'cook:delete_recipe' recipe.pk %}" class="btn_green a_btn_green" title="Удалить рецепт">Удалить</a>-->
 {% endif %}
 
 {% endblock %}

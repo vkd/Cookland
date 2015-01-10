@@ -96,3 +96,17 @@ ul.list_imgs {
 .appetite {
 	text-align: center;
 }
+
+.date {
+	text-align: right;
+	margin-top: 20px;
+}
+
+.icons {
+	text-align: right;
+	margin-top: 10px;
+}
+
+.icons img {
+	width: 25px;
+}
