@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Classica One';
+    src: url('classica_one.eot');
+    src: url('classica_one.eot?#iefix') format('embedded-opentype'),
+         url('classica_one.woff') format('woff'),
+         url('classica_one.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Classica Two';
+    src: url('classica_two.eot');
+    src: url('classica_two.eot?#iefix') format('embedded-opentype'),
+         url('classica_two.woff') format('woff'),
+         url('classica_two.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

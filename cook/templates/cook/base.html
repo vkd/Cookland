@@ -14,7 +14,8 @@
 	<div class="wrapper">
 
 	<header class="header-page">
-		<div class="logo"><a href="{% url 'cook:index' %}"><img src="{% static "style/name.png" %}"></a></div>
+		<!--<div class="logo"><a href="{% url 'cook:index' %}"><img src="{% static "style/name.png" %}"></a></div>-->
+		<div class="logo"><a href="{% url 'cook:index' %}">Вкус творчества</a></div>
 		<div class="inputsite">
 			{% if user.is_authenticated %}
 			    <div>Добро пожаловать, {{ user.username }}</div>

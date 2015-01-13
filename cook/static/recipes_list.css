@@ -7,7 +7,7 @@ hr {
 
 .h_title {
 	text-align: center;
-	font-size: 26px;
+	font: 26px Arial;
 	font-weight: normal;
 	color: #c81414;
 	text-shadow: 1px 1px 1px #696969;
@@ -86,7 +86,7 @@ ul.list_imgs {
 .h_review {
 	color: #008B00;
 	font-weight: normal;
-	font-size: 20px;
+	font: 20px Verdana;
 }
 
 .ul_review {
@@ -100,6 +100,7 @@ ul.list_imgs {
 .date {
 	text-align: right;
 	margin-top: 20px;
+	font-family: 'Courier New', Courier, monospace;
 }
 
 .icons {

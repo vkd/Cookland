@@ -1,8 +1,8 @@
 html,
 body {
 	width:100%;
-	height:100%; 
-	padding: 0; 
+	height:100%;
+	padding: 0;
 	margin: 0;
 	color: rgb(79, 79, 79);
 }
@@ -15,8 +15,8 @@ html {
 
 body {
 	font-size: 15px;
-	font-family: Tahoma, Verdana, sans-serif;
-	margin:0; 
+	font-family: Tahoma, Geneva;
+	margin:0;
 	padding:0;
 	overflow: auto;
 }
@@ -25,13 +25,32 @@ footer, header, menu, section {
 	display: block;
 }
 
-a {
-	text-decoration: none;
-	color: #4F4F4F;
+@font-face {
+    font-family: 'Classica One';
+    src: url('classica_one.eot');
+    src: url('classica_one.eot?#iefix') format('embedded-opentype'),
+         url('classica_one.woff') format('woff'),
+         url('classica_one.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Classica Two';
+    src: url('classica_two.eot');
+    src: url('classica_two.eot?#iefix') format('embedded-opentype'),
+         url('classica_two.woff') format('woff'),
+         url('classica_two.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .a_btn_green {
 	padding-top: 5px;
+}
+
+.a_hov_red {
+	text-decoration: none;
 }
 
 .a_hov_red:hover {
@@ -78,17 +97,23 @@ input[type="text"]:focus::-moz-placeholder {
 	padding-left: 7px;
 }
 
+.decor {
+	font: 20px 'Classica Two';
+	padding-right: 2px;
+}
+
+
 .btn_green {
 	min-width: 100px;
 	min-height: 25px;
 	display: inline-block;
 	text-align: center;
-	border: 1px solid #8cd148;  
+	border: 1px solid #8cd148;
 	font-weight: bold;
-	color: #fff; 
+	color: #fff;
 	text-shadow: 1px 1px 1px #427212;
 	background: #8cd148;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4),
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
@@ -109,8 +134,18 @@ input[type="text"]:focus::-moz-placeholder {
 /*Шапка сайта*/
 
 .logo {
-	float: left;
-	margin: 0 0 0 15%;	
+	/*float: left;*/
+	font-family: 'Classica Two';
+	position: relative;
+	top: -3%;
+	left: 8%
+}
+
+.logo a {
+	color: #ea0808;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 50px;
 }
 
 .inputsite {
@@ -121,24 +156,24 @@ input[type="text"]:focus::-moz-placeholder {
 	text-align: right;
 }
 
-.header-page { 
-	width: 1024px; 
-	height:120px; 
-	margin: 0 auto; 
+.header-page {
+	width: 1024px;
+	height:120px;
+	margin: 0 auto;
 	padding:10px;
 	position: relative;
 }
 
 .header-menu {
-	width: 1024px; 
-	height:50px; 
-	margin: 0 auto; 
-	padding:10px;
+	width: 1024px;
+	height:50px;
+	margin: 0 auto;
+	padding: 10px;
 	position: relative;
 
 	background: #fff;
     border-radius: 4px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
  }
 
@@ -162,7 +197,11 @@ input[type="text"]:focus::-moz-placeholder {
 }
 
 .a-header {
-	display: block;
+	display: inline-block;
+	/*font: 30px 'Classica Two';
+	color: #980a0a;
+	text-decoration: none;
+	padding-left: 40px;*/
 }
 
 .main-menu {
@@ -174,7 +213,7 @@ input[type="text"]:focus::-moz-placeholder {
 .main-menu>li {
     display: inline-block;
     margin-left: 2%;
-    position:relative;
+    position: relative;
 }
 
 .main-menu > li > a {
@@ -195,7 +234,7 @@ input[type="text"]:focus::-moz-placeholder {
     margin: 0;
     list-style:none;
     background-color: #fff;
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
     display: none;
 }
@@ -211,34 +250,34 @@ input[type="text"]:focus::-moz-placeholder {
 	height: 40px;
 }
 
-.wrapper { 
-	width: 100%; 
-	margin:0px auto; 
-	padding:0px 0px 0px 0px; 
-	position:relative; 
-	min-height: 100%; 
-	height: auto!important; 
+.wrapper {
+	width: 100%;
+	margin:0px auto;
+	padding:0px 0px 0px 0px;
+	position:relative;
+	min-height: 100%;
+	height: auto!important;
 	height: 100%;
 }
 
 /*Контент сайта*/
 
-.container { 
-	width: 1024px; 
-	position:relative; 
+.container {
+	width: 1024px;
+	position:relative;
 	padding: 20px 10px 20px 10px;
 	overflow: hidden;
 	margin: auto;
 	background-color: #fff;
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
-	background-image: linear-gradient(-102deg, 
-		rgba(0,0,0,.1), 
-		rgba(0,0,0,.05) 10px, 
+	background-image: linear-gradient(-102deg,
+		rgba(0,0,0,.1),
+		rgba(0,0,0,.05) 10px,
 		rgba(0,0,0,0) 20px),
-	linear-gradient(102deg, 
-		rgba(0,0,0,.1), 
-		rgba(0,0,0,.05) 10px, 
+	linear-gradient(102deg,
+		rgba(0,0,0,.1),
+		rgba(0,0,0,.05) 10px,
 		rgba(0,0,0,0) 20px);
 }
 
@@ -251,7 +290,7 @@ input[type="text"]:focus::-moz-placeholder {
 	z-index: -1;
 }
 
-.container:after { 
+.container:after {
 	right: 20px;
 	box-shadow: 10px -10px 10px rgba(0,0,0,.5);
 	transform: rotate(-2deg) skew(-20deg);
@@ -280,8 +319,13 @@ input[type="text"]:focus::-moz-placeholder {
 	margin-left: 750px;
 	background: #fff;
     border-radius: 4px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.menu a {
+	text-decoration: none;
+	color: #4F4F4F;
 }
 
 .menu ul {
@@ -296,7 +340,7 @@ input[type="text"]:focus::-moz-placeholder {
 
 .menu li {
 	list-style-image: url("dope.png");
-	padding: 10px 0px 10px 0px; 
+	padding: 10px 0px 10px 0px;
 	border-bottom: 1px dashed #27408B;
 }
 
@@ -329,8 +373,13 @@ input[type="text"]:focus::-moz-placeholder {
 	margin-left: 750px;
 	background: #fff;
     border-radius: 4px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.new_recipe_menu a {
+	text-decoration: none;
+	color: #4F4F4F;
 }
 
 .new_recipe_menu ul {
@@ -363,7 +412,7 @@ input[type="text"]:focus::-moz-placeholder {
 	margin-left: 10px;
 	margin-bottom: 20px;
 	border-radius: 4px;
-	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5), 
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5),
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
@@ -387,20 +436,20 @@ input[type="text"]:focus::-moz-placeholder {
 	width: 150px;
 }
 
-.clearing { 
+.clearing {
 	clear: both;
 	display: inline;
 	width: 100%;
 	height: 0;
 	overflow: hidden;
-} 
+}
 
 .footer-page {
-	height: auto; 
-	width: 1024px; 
-	margin: 0 auto 0; 
-	padding: 10px; 
-	position: relative; 
+	height: auto;
+	width: 1024px;
+	margin: 0 auto 0;
+	padding: 10px;
+	position: relative;
 	overflow: hidden;
 	text-align: right;
 }
