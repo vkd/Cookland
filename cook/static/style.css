@@ -134,11 +134,11 @@ input[type="text"]:focus::-moz-placeholder {
 /*Шапка сайта*/
 
 .logo {
-	/*float: left;*/
-	font-family: 'Classica Two';
+	float: left;
+	/*font-family: 'Classica Two';
 	position: relative;
 	top: -3%;
-	left: 8%
+	left: 8%*/
 }
 
 .logo a {
@@ -168,7 +168,7 @@ input[type="text"]:focus::-moz-placeholder {
 	width: 1024px;
 	height:50px;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 15px;
 	position: relative;
 
 	background: #fff;
@@ -198,10 +198,11 @@ input[type="text"]:focus::-moz-placeholder {
 
 .a-header {
 	display: inline-block;
-	/*font: 30px 'Classica Two';
-	color: #980a0a;
+	font: 30px 'Classica One';
+	color: #bf2121;
 	text-decoration: none;
-	padding-left: 40px;*/
+	padding-left: 50px;
+	font-weight: bold;
 }
 
 .main-menu {
@@ -214,6 +215,7 @@ input[type="text"]:focus::-moz-placeholder {
     display: inline-block;
     margin-left: 2%;
     position: relative;
+    bottom: 10px;
 }
 
 .main-menu > li > a {
