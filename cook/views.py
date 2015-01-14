@@ -25,7 +25,7 @@ def add_recipe(request):
             else:
                 context = {'error_msg': 'form is invalid', 'form': form}
         else:
-            context = {'form': AddRecipeForm() }
+            context = {'form': AddRecipeForm()}
 
         return render(request, 'cook/add_recipe.html', context)
     else:
