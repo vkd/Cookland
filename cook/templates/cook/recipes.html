@@ -60,4 +60,20 @@
 	<p>empty list</p>
 {% endfor %}
 
+<div class="pagination">
+    <span class="step-links">
+        {% if recipes.has_previous %}
+            <a href="?page={{ recipes.previous_page_number }}"><</a>
+        {% endif %}
+
+        <span class="current">
+            Стр {{ recipes.number }} из {{ recipes.paginator.num_pages }}
+        </span>
+
+        {% if recipes.has_next %}
+            <a href="?page={{ recipes.next_page_number }}">></a>
+        {% endif %}
+    </span>
+</div>
+
 {% endblock %}

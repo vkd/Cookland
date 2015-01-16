@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.template import loader, Context
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.core.urlresolvers import reverse_lazy
+from django.core.paginator import *
 from django.contrib.auth import authenticate, login
 
 from cook.models import *
@@ -75,8 +76,19 @@ def custom_not_found_page(request):
 
 
 def recipes(request):
-    context = {'recipes': Recipe.objects.all()[:5]}
-    # context = {'recipes': Recipe.objects.all().order_by('-date_create')}
+    recipes_all = Recipe.objects.all()  # .order_by('-date_create')
+
+    count_per_page = 10
+    paginator = Paginator(recipes_all, count_per_page)
+    page = request.GET.get('page', 1)
+    try:
+        recipes = paginator.page(page)
+    except PageNotAnInteger:
+        recipes = paginator.page(1)
+    except EmptyPage:
+        recipes = paginator.page(paginator.num_pages)
+
+    context = {'recipes': recipes}
     return render(request, 'cook/recipes.html', context)
 
 
