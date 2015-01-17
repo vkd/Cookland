@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.template import loader, Context
+from django.shortcuts import get_object_or_404
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.core.urlresolvers import reverse_lazy
 from django.core.paginator import *
@@ -34,7 +35,7 @@ def add_recipe(request):
 
 
 def view_recipe(request, pk):
-    recipe = Recipe.objects.get(pk=pk)
+    recipe = get_object_or_404(Recipe, pk=pk)  # Recipe.objects.get(pk=pk)
     context = {'recipe': recipe}
     return render(request, 'cook/view_recipe.html', context)
 
