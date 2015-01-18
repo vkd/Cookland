@@ -21,16 +21,16 @@
 
             {{ form.errors }}
             <div class="in_login in_name">
-                {{ form.recipe_name.errors }}
-                <!-- <label for="{{ form.recipe_name.id_for_label }}">Название рецепта</label> -->
-                {% render_field form.recipe_name placeholder="Название рецепта" %}
+                {{ form.name.errors }}
+                <!-- <label for="{{ form.name.id_for_label }}">Название рецепта</label> -->
+                {% render_field form.name placeholder="Название рецепта" %}
             </div>
             <p>
                 {{ form.discribe.errors }}
                 <!-- <label for="{{ form.discribe.id_for_label }}">Краткое описание рецепта</label> -->
                 {% render_field form.discribe placeholder="Краткое описание рецепта" class+="in_description text_area" %}
             </p>
-            <!-- <div class="in_login in_name"><input type="text" id="recipe_name" name="recipe_name" placeholder="Название рецепта"></div> -->
+            <!-- <div class="in_login in_name"><input type="text" id="name" name="name" placeholder="Название рецепта"></div> -->
             <!-- <p><textarea placeholder="Краткое описание рецепта" class="in_description"></textarea></p> -->
             <p><textarea placeholder="Ингридиенты" class="ingredients text_area"></textarea></p>
             <p><textarea placeholder="Процесс приготовления" class="cooking text_area"></textarea></p>
