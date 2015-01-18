@@ -33,7 +33,7 @@
 
 {% for recipe in recipes %}
 	<div class="prew_recipes">
-		<img src="{% static "style/test_1.jpg" %}">
+		<img src="{% static "img" %}/{{ recipe.image }}" width="150" height="100">
 		<a class="a_hov_red" href="{% url 'cook:view_recipe' recipe.pk %}">{{ recipe.name }}</a>
 		<p>{{ recipe.discribe }}</p>
 		<h2>Ингридиенты:</h2>

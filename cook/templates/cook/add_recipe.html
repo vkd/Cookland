@@ -7,12 +7,12 @@
 <div class="container">
 <div class="add_content">
     {% if user.is_authenticated %}
-        <form action="{% url 'cook:add_recipe' %}" method="post" class="add_recipe">
+        <form action="{% url 'cook:add_recipe' %}" method="post" class="add_recipe" enctype="multipart/form-data">
             {% csrf_token %}
             <h1 class="h_title">Форма добавления рецепта</h1>
             <div class="add_left_block">
             <img src="{% static "style/not_img.jpg" %}"><br>
-            <input type="submit" value="Выбрать файл" class="btn_green btn_add_file" />
+            {% render_field form.image value="Выбрать файл" class+="btn_green btn_add_file" %}
             </div>
 
             {% if error_msg %}

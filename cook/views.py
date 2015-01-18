@@ -15,7 +15,7 @@ from cook.forms import *
 def add_recipe(request):
     if request.user.is_authenticated():
         if request.method == 'POST':
-            form = AddRecipeForm(request.POST)
+            form = AddRecipeForm(request.POST, request.FILES)
             if form.is_valid():
                 form.save()
                 return HttpResponseRedirect(reverse_lazy('cook:recipes'))
