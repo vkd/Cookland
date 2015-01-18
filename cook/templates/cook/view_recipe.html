@@ -41,7 +41,7 @@
 {% if user.is_authenticated %}
 <div style="float: right;">
 	<div class="date">
-		Рецепт опубликован: 10.01.2015
+		Рецепт опубликован: {{ recipe.date_create|date:"H:i j M Y" }}<!-- 10.01.2015 -->
 	</div>
 	<div class="icons">
 		<img src="{% static "style/change.png" %}" title="Изменить рецепт">
