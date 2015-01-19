@@ -197,9 +197,9 @@ input[type="checkbox"]:checked + label span {
 }
 
 .btn_add_file {
-	width: 150px;
+	width: 190px;
 	display: block;
-	margin: 10px 26px 20px 26px;
+	margin: 10px 0px 20px 8px;
 }
 
 .text_area {

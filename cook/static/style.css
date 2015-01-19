@@ -387,7 +387,7 @@ input[type="text"]:focus::-moz-placeholder {
 }
 
 .head_right_menu {
-	font-family: 'blogger_sans';
+	font: 21px 'blogger_sans';
 }
 
 .new_recipe_menu {
