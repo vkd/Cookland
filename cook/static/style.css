@@ -46,22 +46,22 @@ footer, header, menu, section {
 }
 
 @font-face {
-    font-family: 'Ay9a6ZYx';
-    src: url('Ay9a6ZYx.ttf') format('truetype');
+    font-family: 'logofont1';
+    src: url('logofont1.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ZmPbJ0zp';
-    src: url('ZmPbJ0zp.ttf') format('truetype');
+    font-family: 'majestic';
+    src: url('majestic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'fUXHAC21';
-    src: url('fUXHAC21.ttf') format('truetype');
+    font-family: 'blogger_sans';
+    src: url('blogger_sans.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -158,7 +158,7 @@ input[type="text"]:focus::-moz-placeholder {
 .logo {
 	float: left;
 	margin: 0 0 0 20%;
-	font-family: 'fUXHAC21';
+	font-family: 'majestic';
 }
 
 .logo a {
