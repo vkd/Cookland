@@ -386,6 +386,10 @@ input[type="text"]:focus::-moz-placeholder {
 	border-bottom-right-radius: 10px;
 }
 
+.head_right_menu {
+	font-family: 'blogger_sans';
+}
+
 .new_recipe_menu {
 	width: 25%;
 	height: auto;

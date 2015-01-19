@@ -17,7 +17,7 @@
 		</section>
 		<section class="menu">
 			<ul>
-				<li>Категории рецептов</li>
+				<li><span class="head_right_menu">Категории рецептов</span></li>
 				<li class="imgmarker"><a class="a_hov_red" href="{% url 'cook:recipes' %}">Список рецептов</a></li>
 				{% if user.is_authenticated %}
 					<li class="imgmarker"><a class="a_hov_red" href="{% url 'cook:add_recipe' %}">Добавить рецепт</a></li>
@@ -34,14 +34,14 @@
 		</section>
 		<section class="menu">
 			<ul>
-				<li>Полезные и интересное</li>
+				<li><span class="head_right_menu">Полезные и интересное</span></li>
 				<li><a class="a_hov_red" href="">Пропорции крупы и жидкости для варки каш</a></li>
 				<li><a class="a_hov_red" href="">Почему шоколад поднимает настроение?</a></li>
 			</ul><br>
 		</section>
 		<section class="new_recipe_menu">
 			<ul>
-				<li>Новые рецепты</li>
+				<li><span class="head_right_menu">Новые рецепты</span></li>
 				<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
 				<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
 			</ul><br>
