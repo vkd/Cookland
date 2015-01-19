@@ -45,6 +45,27 @@ footer, header, menu, section {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Ay9a6ZYx';
+    src: url('Ay9a6ZYx.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ZmPbJ0zp';
+    src: url('ZmPbJ0zp.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fUXHAC21';
+    src: url('fUXHAC21.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .a_btn_green {
 	padding-top: 5px;
 }
@@ -100,6 +121,7 @@ input[type="text"]:focus::-moz-placeholder {
 .decor {
 	font: 20px 'Classica Two';
 	padding-right: 2px;
+	font-weight: bold;
 }
 
 
@@ -135,17 +157,14 @@ input[type="text"]:focus::-moz-placeholder {
 
 .logo {
 	float: left;
-	/*font-family: 'Classica Two';
-	position: relative;
-	top: -3%;
-	left: 8%*/
+	margin: 0 0 0 20%;
+	font-family: 'fUXHAC21';
 }
 
 .logo a {
-	color: #ea0808;
+	color: #EE2C2C;
 	text-decoration: none;
-	font-weight: bold;
-	font-size: 50px;
+	font-size: 85px;
 }
 
 .inputsite {
