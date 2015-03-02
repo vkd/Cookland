@@ -6,7 +6,7 @@
 	position: relative;
 }
 
-.login-form{		/*Окно формы входа*/
+.login-form {		/*Окно формы входа*/
    display: block;
    width: 380px;
    height: 250px;
@@ -153,6 +153,7 @@ input[type="checkbox"]:checked + label span {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
     			0 0 40px rgba(0, 0, 0, 0.1) inset;
     border: 2px solid #8cd148;
+    text-decoration: none;
 }
 
 .close:before {
