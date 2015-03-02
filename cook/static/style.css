@@ -82,6 +82,10 @@ footer, header, menu, section {
 	color: #363636;
 }
 
+.center {
+	text-align: center;
+}
+
 input[type="text"],
 input[type="submit"] {
 	height: 30px;
@@ -449,6 +453,17 @@ input[type="text"]:focus::-moz-placeholder {
 	border-radius: 4px;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
+}
+
+.new_recipe_index {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.new_recipe_index li {
+	display: inline-block;
+	text-align: center;
 }
 
 /*Подвал сайта*/

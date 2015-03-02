@@ -9,5 +9,39 @@
 			<p>Надеюсь на этом сайте Вы найдете много интересных рецептов и полезных советов.</p>
 			<p>Готовьте с любовью, душой и удовольствеим, подходите к готовке творчески и тогда любое блюдо получится настоящим шедевром!</p>
 
+
+<script>
+	window.onload = function () {
+		document.getElementById("ul").onclick = function a(e) {
+			e = e || event;
+			var target = e.target || e.srcElement;
+			if (target.tagName == "LI") {
+				document.getElementById(target.className).style.display = document.getElementById(target.className).style.display == "block" ? "none" : "block";
+				target.style.listStyleImage = document.getElementById(target.className).style.display == "block" ? "url({% static "style/down_tail.png" %})" : "url({% static "style/arrow.png" %})";
+			//alert("v");
+			}
+		}
+	}
+</script>
+
+<h1 class="h_title">Последние добавленные рецепты</h1>
+<div class="center">
+	<ul class="new_recipe_index">
+		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
+		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
+		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
+		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
+		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
+		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
+		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
+		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
+		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
+		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
+		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
+		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
+	</ul><br>
+</div>
+
 {% endblock %}
+
 
