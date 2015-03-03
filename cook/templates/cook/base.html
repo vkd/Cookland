@@ -15,10 +15,9 @@
 
 	<header class="header-page">
 		<!--<div class="logo"><a href="{% url 'cook:index' %}"><img src="{% static "style/name.png" %}"></a></div>-->
-		<div class="logo"><a href="{% url 'cook:index' %}">Вкус творчества<span>Готовим с удовольствием</span></a></div>
 		<div class="inputsite">
 			{% if user.is_authenticated %}
-			    <div class="log_name">Добро пожаловать, {{ user.username }}</div>
+			    <div>Добро пожаловать, {{ user.username }}</div>
 				<p><input type="submit" onclick="javascript:window.location='{% url 'cook:logout' %}'" value="Выйти" class="btn_green btn_logout"></p>
 			{% else %}
 				<p><input type="submit" onclick="javascript:window.location='#win'" value="Войти" class="btn_green btn_login" id="win_pop"></p>
@@ -44,6 +43,7 @@
 		<div class="search">
 			<input type="text" name="search" placeholder="Поиск по сайту"><br><br>
 		</div>
+		<div class="logo"><a href="{% url 'cook:index' %}">Вкус творчества<span>Готовим с удовольствием</span></a></div>
 	</header>
 
 	{% block layout_block %}
