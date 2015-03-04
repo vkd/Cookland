@@ -35,7 +35,7 @@
 	<div class="prew_recipes">
 		<img src="{% static "img" %}/{{ recipe.image }}" width="150" height="100">
 		<a class="a_hov_red" href="{% url 'cook:view_recipe' recipe.pk %}">{{ recipe.name }}</a>
-		<p>{{ recipe.discribe }}</p>
+		<p>{{ recipe.discribe|safe }}</p>
 		<h2>Ингридиенты:</h2>
 		<p>500 г рыбы, 200 г лука, 150 г моркови, 15 г желатина, 3 лавровых листа, 5 шт. душистого перца, 5 бутончиков гвоздики, соль   для украшения: яйцо, зелень, клюква, 3 лавровых листа, 5 шт. душистого перца, 3 лавровых листа, 5 шт. душистого перца.
 		</p>
