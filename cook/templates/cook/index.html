@@ -27,18 +27,11 @@
 <h1 class="h_title">Последние добавленные рецепты</h1>
 <div class="center">
 	<ul class="new_recipe_index">
-		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
-		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
-		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
-		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
-		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
-		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
-		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
-		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
-		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
-		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
-		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_1.jpg" %}"><br>Овощное рагу</a></li>
-		<li><a href="" class="a_hov_red new_recipe_block"><img src="{% static "style/test_2.jpg" %}"><br>Шарлотка</a></li>
+		{% for recipe in recipes %}
+			<li><a href="{% url 'cook:view_recipe' recipe.pk %}" class="a_hov_red new_recipe_block"><img src="{% static "img" %}/{{ recipe.image }}" width="150" height="100"><br>{{ recipe.name|slice:":18" }}</a></li>
+		{% empty %}
+			<p>empty list</p>
+		{% endfor %}
 	</ul><br>
 </div>
 

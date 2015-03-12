@@ -69,7 +69,7 @@ def index(request):
     # except CookPost.DoesNotExist:
     #   raise Http404
 
-    context = {}
+    context = {'recipes': get_recipes(1, 12)}
     return render(request, 'cook/index.html', context)
 
 
@@ -79,11 +79,17 @@ def custom_not_found_page(request):
 
 
 def recipes(request):
+    count_per_page = 10
+    page = request.GET.get('page', 1)
+
+    context = {'recipes': get_recipes(page, count_per_page)}
+    return render(request, 'cook/recipes.html', context)
+
+
+def get_recipes(page, count):
     recipes_all = Recipe.objects.all()  # .order_by('-date_create')
 
-    count_per_page = 10
-    paginator = Paginator(recipes_all, count_per_page)
-    page = request.GET.get('page', 1)
+    paginator = Paginator(recipes_all, count)
     try:
         recipes = paginator.page(page)
     except PageNotAnInteger:
@@ -91,8 +97,7 @@ def recipes(request):
     except EmptyPage:
         recipes = paginator.page(paginator.num_pages)
 
-    context = {'recipes': recipes}
-    return render(request, 'cook/recipes.html', context)
+    return recipes
 
 
 def login_action(request):
