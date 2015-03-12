@@ -7,11 +7,16 @@
 <div class="container">
 <div class="add_content">
     {% if user.is_authenticated %}
+        {% if edit_mode %}
+        <form action="{% url 'cook:edit_recipe' edit_pk %}" method="post" class="add_recipe" enctype="multipart/form-data">
+        {% else %}
         <form action="{% url 'cook:add_recipe' %}" method="post" class="add_recipe" enctype="multipart/form-data">
+        {% endif %}
             {% csrf_token %}
             <h1 class="h_title">Форма добавления рецепта</h1>
             <div class="add_left_block">
-            <img src="{% static "style/not_img.jpg" %}"><br>
+            <img src="{% static 'img/' %}{{ image_url }}"><br>
+            <!-- <img src="{% static "style/not_img.jpg" %}"><br> -->
             {% render_field form.image value="Выбрать файл" class+="btn_add_file" %}
             </div>
 
@@ -32,14 +37,15 @@
             </p>
             <!-- <div class="in_login in_name"><input type="text" id="name" name="name" placeholder="Название рецепта"></div> -->
             <!-- <p><textarea placeholder="Краткое описание рецепта" class="in_description"></textarea></p> -->
-            <p><textarea placeholder="Ингридиенты" class="ingredients text_area"></textarea></p>
+            <!-- <p><textarea placeholder="Ингридиенты" class="ingredients text_area"></textarea></p>
             <p><textarea placeholder="Процесс приготовления" class="cooking text_area"></textarea></p>
-            <p><textarea placeholder="Комментарии автора к рецепту" class="comments text_area"></textarea></p>
+            <p><textarea placeholder="Комментарии автора к рецепту" class="comments text_area"></textarea></p> -->
+
 <!--            <p><h2 class="h_labels">Выберите метки, соответствующие рецепту:</h2>
                 <ul style="list-style: none;">
                     <li><input type="checkbox" id="checkbox-id" /> <label for="checkbox-id"><span></span>Мясо</label></li>
                 </ul></p> -->
-            <div class="select_box">
+<!--             <div class="select_box">
             <select>
                 <option>Выберете категорию рецепта</option>
                 <option>Первые блюда</option>
@@ -52,8 +58,12 @@
                 <option>Идеи для пикника</option>
                 <option>Напитки</option>
             </select>
-            </div>
+            </div> -->
+            {% if edit_mode %}
+            <input type="submit" value="Редактировать рецепт" class="btn_green but_add_recipe" />
+            {% else %}
             <input type="submit" value="Добавить рецепт" class="btn_green but_add_recipe" />
+            {% endif %}
         </form>
     {% else %}
         <p>Необходимо залогиниться, чтобы добавлять рецепты!</p>

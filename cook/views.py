@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.template import loader, Context
-from django.shortcuts import get_object_or_404
+from django.template import loader, Context, RequestContext
+from django.shortcuts import get_object_or_404, render_to_response
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.core.urlresolvers import reverse_lazy
 from django.core.paginator import *
@@ -46,12 +46,19 @@ def delete_recipe(request, pk):
 
 def edit_recipe(request, pk):
     if request.user.is_authenticated():
-        # recipe = Recipe.objects.get(pk=pk)
-        # form = AddRecipeForm(instance=recipe)
-        context = {}
-        # context = { 'from': form }
-        return render(request, 'cook/add_recipe.html', context)
-        # return HttpResponseRedirect(reverse_lazy('cook:recipes'))
+        if request.method == 'POST':
+            recipe = Recipe.objects.get(pk=pk)
+            form = AddRecipeForm(request.POST, request.FILES, instance=recipe)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect(reverse_lazy('cook:recipes'))
+        else:
+            recipe = Recipe.objects.get(pk=pk)
+            form = AddRecipeForm(instance=recipe)
+            # form = EditRecipeForm({'name': recipe.name})
+            context = {'form': form, 'image_url': recipe.image.url, 'edit_mode': True, 'edit_pk': recipe.pk}
+            return render(request, 'cook/add_recipe.html', context)
+            # return render(request, 'cook/edit_recipe.html', context)
     else:
         return HttpResponseRedirect(reverse_lazy('cook:index'))
 
